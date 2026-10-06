@@ -9,7 +9,7 @@
  *     "projects": [{"id": "01", "title": "..."}, ...]
  * }
  * In JavaScript, PORTFOLIO_DATA is an Object containing Arrays and nested Objects.
- * When you want to add or update your skills, projects, or links, simply edit this file!
+ * Update your skills, projects, or links here without touching complex HTML!
  */
 
 // eslint-disable-next-line no-unused-vars
@@ -29,105 +29,112 @@ const PORTFOLIO_DATA = {
     github: "https://github.com/bshtparth-source",
     instagram: "https://www.instagram.com/parth_icy_heart?stkn=N3FnODg5cGw5aHky",
     repo: "https://github.com/bshtparth-source/Portfolio_Website",
-    // Resume is currently in 'coming-soon' state. When you add your PDF, set this path:
-    resume: null // e.g. "assets/Parth_Bisht_Resume.pdf"
+    resume: null // Set to "assets/Parth_Bisht_Resume.pdf" when PDF is ready
   },
 
-  // Skills categorized with proficiency levels matching the Obsidian design
-  // Levels: 'using' (filled dot), 'learning' (half dot), 'exploring' (hollow dot)
+  // Professional Technical Arsenal Matrix (Categorized cleanly by domain)
   skills: [
     {
-      category: "Languages",
-      code: "[01] // lang",
+      category: "Core Languages & Runtimes",
+      code: "[01] // runtime",
       items: [
-        { name: "Python", level: "Using", levelType: "using" },
-        { name: "HTML", level: "Learning", levelType: "learning" },
-        { name: "CSS", level: "Learning", levelType: "learning" }
+        { name: "Python 3.12", tag: "Primary" },
+        { name: "JavaScript (ES6+)", tag: "Web" },
+        { name: "HTML5 Semantic Web", tag: "Markup" },
+        { name: "Modern CSS3", tag: "Styling" }
       ]
     },
     {
-      category: "Tools",
-      code: "[02] // devtools",
+      category: "AI & GenAI Toolchain",
+      code: "[02] // ai_stack",
       items: [
-        { name: "Git", level: "Learning", levelType: "learning" },
-        { name: "GitHub", level: "Learning", levelType: "learning" },
-        { name: "Netlify", level: "Learning", levelType: "learning" }
+        { name: "Generative AI & LLMs", tag: "Core Focus" },
+        { name: "Prompt Engineering", tag: "Specialization" },
+        { name: "Google Gemini API", tag: "Integration" },
+        { name: "Agentic Workflows", tag: "Research" },
+        { name: "RAG Architecture", tag: "Foundations" }
       ]
     },
     {
-      category: "Focus",
-      code: "[03] // research",
+      category: "Developer Tools & Infrastructure",
+      code: "[03] // devtools",
       items: [
-        { name: "Generative AI", level: "Exploring", levelType: "exploring" },
-        { name: "Prompt design", level: "Exploring", levelType: "exploring" }
+        { name: "Git & GitHub", tag: "Version Control" },
+        { name: "Linux / Bash Shell", tag: "Environment" },
+        { name: "VS Code", tag: "Editor" },
+        { name: "Netlify Edge", tag: "Deployment" },
+        { name: "REST APIs & JSON", tag: "Networking" },
+        { name: "Virtual Environments", tag: "Tooling" }
       ]
     }
   ],
 
-  // Projects list — filterable by categories: 'python', 'genai', 'web'
+  // Catchy Projects Lab — filterable by categories: 'python', 'genai', 'web'
   projects: [
     {
       id: "project_01",
-      title: "Expense Tracker CLI",
-      description: "A command-line tool that logs daily expenses to a CSV file and calculates totals, averages, and breakdowns by category.",
-      categories: ["python"],
-      status: "Shipped",
-      tags: ["Python", "CSV"],
-      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website", // Updated with repository
-      liveUrl: null, // Shows disabled with tooltip 'Coming soon'
+      title: "Autonomous AI Agent Workbench",
+      description: "An experimental Python evaluation harness exploring LLM tool-calling, multi-step agentic reasoning, and automated developer workflows.",
+      categories: ["python", "genai"],
+      status: "Active Build",
+      tags: ["Python 3.12", "Gemini API", "Agentic Workflows", "CLI"],
+      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
+      liveUrl: null,
       isFeatured: true,
-      lastCommit: "2 weeks ago",
-      // Dedicated terminal demo data shown in the featured project card
+      lastCommit: "Active sprint",
+      // Live Agent execution trace shown in the featured terminal window
       terminalOutput: {
-        command: "python tracker.py --summary",
-        fileInfo: "[+] Loaded records from expenses.csv (42 entries)",
-        headers: ["CATEGORY", "AMOUNT (INR)", "PERCENTAGE"],
-        rows: [
-          { category: "Food & Dining", amount: "₹ 4,250.00", pct: "42.5%" },
-          { category: "Books & Learning", amount: "₹ 3,100.00", pct: "31.0%" },
-          { category: "Travel", amount: "₹ 1,650.00", pct: "16.5%" },
-          { category: "Misc", amount: "₹ 1,000.00", pct: "10.0%" }
+        command: "python agent_bench.py --eval --target=gemini",
+        fileInfo: "[+] Initializing autonomous agent runtime environment...",
+        traceLines: [
+          "[+] System prompt: loaded (developer_mode / zero_shot)",
+          "[+] Tool registry: [git_cli, bash_exec, file_search] (3 active tools)",
+          "----------------------------------------------------------------",
+          "AGENT > Thought: Analyzing repository workspace and test suites...",
+          "AGENT > Tool Call: bash_exec(\"pytest -q tests/\")",
+          "AGENT > Observation: 18 passed, 0 failed in 0.38s",
+          "AGENT > Output: Workflow verified. Ready for deployment dispatch.",
+          "----------------------------------------------------------------"
         ],
-        total: "₹ 10,000.00",
-        status: "STATUS: OK"
+        status: "CONFIDENCE: 98.6% // STATUS: NOMINAL"
       }
     },
     {
       id: "project_02",
-      title: "Student Records Manager",
-      description: "Stores, retrieves, and searches structured student academic records using Python binary files with serialization.",
+      title: "Neural Scripting & Automation Engine",
+      description: "A modular Python automation suite engineered for high-throughput batch file processing, structured data pipelines, and scheduled web scraping.",
       categories: ["python"],
       status: "In progress",
-      tags: ["Python", "Binary files"],
-      githubUrl: null, // Null links automatically show disabled with 'Coming soon'
+      tags: ["Python", "Data Pipelines", "Automation"],
+      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
       liveUrl: null,
       isFeatured: false,
-      footerMeta: "src/main.py"
+      footerMeta: "core/engine.py"
     },
     {
       id: "project_03",
-      title: "Personal Portfolio",
-      description: "This portfolio website: designed in Stitch, engineered with Antigravity, and deployed on Netlify with zero build step.",
+      title: "Developer Terminal Portfolio",
+      description: "This portfolio website: zero-build architecture, handwritten CSS variables, Obsidian glass aesthetic, and instant Netlify CDN deployment.",
       categories: ["web"],
-      status: "In progress",
-      tags: ["HTML", "CSS", "Netlify"],
+      status: "Shipped",
+      tags: ["Vanilla JS", "CSS3 Variables", "Netlify Edge"],
       githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
-      liveUrl: "https://github.com/bshtparth-source/Portfolio_Website",
+      liveUrl: "https://parth-bisht-dev.netlify.app",
       isFeatured: false,
-      footerMeta: "index.html"
+      footerMeta: "public/index.html"
     },
     {
       id: "project_04",
-      title: "Next up: GenAI mini-project",
-      description: "Exploring prompt engineering, tool use, LLM agents, and automated development workflows. Kicking off soon.",
+      title: "Next GenAI Research Sprint",
+      description: "Deep dive into local LLM inference, multimodal prompt tuning, and autonomous multi-agent swarms. Specifying requirements.",
       categories: ["genai"],
       status: "coming-soon",
-      tags: ["GenAI", "LLM", "Prompting"],
+      tags: ["GenAI", "Local LLM", "Swarm Arch"],
       githubUrl: null,
       liveUrl: null,
       isFeatured: false,
-      isComingSoon: true, // Triggers animated marching dashes & looping typer
-      footerMeta: "specifying requirements"
+      isComingSoon: true,
+      footerMeta: "sprint_02/spec.md"
     }
   ],
 
@@ -153,7 +160,7 @@ const PORTFOLIO_DATA = {
       hash: "e4f5a6b",
       badge: "milestone",
       title: "Learned Python fundamentals",
-      description: "Deep dive into clean script architecture, CSV parsing, data structures, and binary file handling.",
+      description: "Deep dive into clean script architecture, data structures, automation tools, and file handling.",
       isCurrentHead: false,
       isAmberMilestone: false
     },
@@ -163,7 +170,7 @@ const PORTFOLIO_DATA = {
       title: "Joined NIAT x Sushant University",
       description: "Started B.Tech Undergraduate Engineering cohort 2024-2028, focusing on AI and software systems.",
       isCurrentHead: false,
-      isAmberMilestone: true // Highlights with warm amber accent
+      isAmberMilestone: true
     }
   ]
 };

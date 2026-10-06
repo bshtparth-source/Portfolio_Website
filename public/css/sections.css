@@ -728,29 +728,6 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Skills legend card */
-.skills-legend-bar {
-  margin-top: var(--space-md);
-  background: var(--color-surface);
-  border: 1px solid var(--color-surface-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-sm) var(--space-md);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 /* Journey: Git Log Timeline */
 .journey-timeline-card {
   padding: var(--space-xl);

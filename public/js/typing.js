@@ -49,7 +49,7 @@ const TypingController = {
 
   /**
    * Initializes the Hero terminal sequence:
-   * Types whoami -> prints bio -> types cat focus.txt -> prints focus -> types ls projects/ -> prints list -> blinks cursor.
+   * Types whoami -> prints bio -> types cat focus.txt -> prints focus -> types python -m agent.init --verbose -> prints active build status -> blinks cursor.
    * Runs only once per page load.
    */
   initHeroTerminal() {
@@ -65,14 +65,14 @@ const TypingController = {
       },
       {
         cmd: 'cat focus.txt',
-        output: 'GenAI / Python / Web development',
+        output: 'GenAI / Python / Web development • Learning in public',
         outputClass: 'terminal-output'
       },
       {
-        cmd: 'ls projects/',
-        output: 'expense-tracker/   student-records/   portfolio/',
+        cmd: 'python -m agent.init --verbose',
+        output: '[+] Neural toolchain: READY | Status: ACTIVE_BUILD',
         outputClass: 'terminal-output',
-        outputColor: 'var(--color-amber)'
+        outputColor: 'var(--color-lime)'
       }
     ];
 
@@ -169,9 +169,9 @@ const TypingController = {
     if (!typerElement || this.reducedMotion) return;
 
     const messages = [
-      'git checkout -b next-project',
-      'building the next project...',
-      'status: coming soon'
+      'python -m research.init',
+      'exploring agent architectures...',
+      'status: in progress'
     ];
 
     let messageIndex = 0;

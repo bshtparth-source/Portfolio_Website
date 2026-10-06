@@ -184,10 +184,10 @@
                 <div class="terminal-output">parth bisht | first-year @ NIAT x Sushant University</div>
 
                 <div class="term-line" style="margin-top: 10px;"><span class="terminal-prompt">$</span> <span class="terminal-command">cat focus.txt</span></div>
-                <div class="terminal-output">GenAI <span style="opacity: 0.4;">/</span> Python <span style="opacity: 0.4;">/</span> Web development</div>
+                <div class="terminal-output">GenAI <span style="opacity: 0.4;">/</span> Python <span style="opacity: 0.4;">/</span> Web development • Learning in public</div>
 
-                <div class="term-line" style="margin-top: 10px;"><span class="terminal-prompt">$</span> <span class="terminal-command">ls projects/</span></div>
-                <div class="terminal-output" style="color: var(--color-amber);">expense-tracker/ &nbsp; student-records/ &nbsp; portfolio/</div>
+                <div class="term-line" style="margin-top: 10px;"><span class="terminal-prompt">$</span> <span class="terminal-command">python -m agent.init --verbose</span></div>
+                <div class="terminal-output" style="color: var(--color-lime);">[+] Neural toolchain: READY | Status: ACTIVE_BUILD</div>
 
                 <div class="term-line term-active-prompt" style="margin-top: 10px;">
                   <span class="terminal-prompt">$</span>
@@ -520,43 +520,45 @@
 
         <!-- Container for Featured Project & Projects Grid (Rendered by JS, fallback in HTML) -->
         <div id="projects-container">
-          <!-- Featured Project: Expense Tracker CLI -->
-          <article class="card featured-project scroll-reveal" data-categories="python">
+          <!-- Featured Project: Autonomous AI Agent Workbench -->
+          <article class="card featured-project scroll-reveal" data-categories="python genai">
             <div class="featured-project-grid">
               <!-- Left Details -->
               <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 20px;">
                 <div>
                   <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase;">project_01</span>
-                    <span class="status-badge status-badge-lime">Shipped</span>
+                    <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase;">project_01 // active build</span>
+                    <span class="status-badge status-badge-lime">Active Build</span>
                   </div>
                   <h3 style="font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: 12px;">
-                    Expense Tracker CLI
+                    Autonomous AI Agent Workbench
                   </h3>
                   <p style="font-size: var(--text-body); color: var(--color-text-secondary); line-height: var(--lh-relaxed); margin-bottom: 16px;">
-                    A command-line tool that logs daily expenses to a CSV file and calculates totals, averages, and breakdowns by category.
+                    An experimental Python evaluation harness exploring LLM tool-calling, multi-step agentic reasoning, and automated developer workflows.
                   </p>
                   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span class="chip">Python</span>
-                    <span class="chip">CSV</span>
+                    <span class="chip">Python 3.12</span>
+                    <span class="chip">Gemini API</span>
+                    <span class="chip">Agentic Workflows</span>
+                    <span class="chip">CLI</span>
                   </div>
                 </div>
 
                 <div style="padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
                   <div style="display: flex; align-items: center; gap: 16px;">
-                    <a href="https://github.com/bshtparth-source/Portfolio_Website" target="_blank" rel="noopener noreferrer" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm); display: inline-flex; align-items: center; gap: 4px;">
+                    <a href="https://github.com/bshtparth-source/Portfolio_Website" target="_blank" rel="noopener noreferrer" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm); display: inline-flex; align-items: gap: 4px;">
                       <span>GitHub</span>
                       <span>↗</span>
                     </a>
-                    <span class="btn-disabled" data-tooltip="Coming soon" style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-sm);">
-                      <span>Live ↗</span>
+                    <span class="btn-disabled" data-tooltip="Local evaluation suite" style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-sm);">
+                      <span>CLI Engine</span>
                     </span>
                   </div>
-                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">last commit: 2 weeks ago</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">sprint: active development</span>
                 </div>
               </div>
 
-              <!-- Right Dedicated CLI Output Terminal -->
+              <!-- Right Dedicated CLI Output Terminal: Agent Execution Trace -->
               <div class="terminal-window" style="box-shadow: none;">
                 <div class="terminal-header" style="height: 38px;">
                   <div class="terminal-controls">
@@ -564,47 +566,33 @@
                     <span class="terminal-dot terminal-dot-subtle"></span>
                     <span class="terminal-dot terminal-dot-subtle"></span>
                   </div>
-                  <span class="terminal-title">tracker.py — zsh</span>
+                  <span class="terminal-title">agent_bench.py — bash</span>
                   <div style="width: 30px;"></div>
                 </div>
-                <div class="terminal-body" style="font-size: 13px; line-height: 1.6;">
-                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">python tracker.py --summary</span></div>
-                  <div style="color: var(--color-text-secondary); margin: 6px 0;">[+] Loaded records from expenses.csv (42 entries)</div>
-                  <div style="color: rgba(255,255,255,0.2); margin-bottom: 6px;">------------------------------------------------</div>
-                  <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; color: var(--color-text-muted); font-size: 11px; font-weight: 600; margin-bottom: 6px;">
-                    <span>CATEGORY</span>
-                    <span style="text-align: right;">AMOUNT (INR)</span>
-                    <span style="text-align: right;">PERCENTAGE</span>
+                <div class="terminal-body" style="font-size: 12px; line-height: 1.6; font-family: var(--font-mono);">
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">python agent_bench.py --eval --target=gemini</span></div>
+                  <div style="color: var(--color-text-secondary); margin: 6px 0;">[+] Initializing autonomous agent runtime environment...</div>
+                  <div style="color: var(--color-lime); opacity: 0.9;">[+] System prompt: loaded (developer_mode / zero_shot)</div>
+                  <div style="color: var(--color-amber);">[+] Tool registry: [git_cli, bash_exec, file_search] (3 tools active)</div>
+                  <div style="color: rgba(255,255,255,0.2); margin: 4px 0;">-------------------------------------------------------------</div>
+                  <div style="color: var(--color-text-primary);">
+                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Thought: Analyzing repository workspace and test suites...
                   </div>
-                  <div style="display: flex; flex-direction: column; gap: 4px;">
-                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
-                      <span>Food &amp; Dining</span>
-                      <span style="text-align: right; color: var(--color-text-primary);">₹ 4,250.00</span>
-                      <span style="text-align: right; color: var(--color-text-secondary);">42.5%</span>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
-                      <span>Books &amp; Learning</span>
-                      <span style="text-align: right; color: var(--color-text-primary);">₹ 3,100.00</span>
-                      <span style="text-align: right; color: var(--color-text-secondary);">31.0%</span>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
-                      <span>Travel</span>
-                      <span style="text-align: right; color: var(--color-text-primary);">₹ 1,650.00</span>
-                      <span style="text-align: right; color: var(--color-text-secondary);">16.5%</span>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
-                      <span>Misc</span>
-                      <span style="text-align: right; color: var(--color-text-primary);">₹ 1,000.00</span>
-                      <span style="text-align: right; color: var(--color-text-secondary);">10.0%</span>
-                    </div>
+                  <div style="color: var(--color-lime);">
+                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Tool Call: bash_exec("pytest -q tests/")
                   </div>
-                  <div style="color: rgba(255,255,255,0.2); margin: 6px 0;">------------------------------------------------</div>
-                  <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; font-weight: 700; color: var(--color-text-primary);">
-                    <span>TOTAL SPENT</span>
-                    <span style="text-align: right; color: var(--color-lime);">₹ 10,000.00</span>
-                    <span style="text-align: right; color: var(--color-lime); font-size: 11px;">STATUS: OK</span>
+                  <div style="color: var(--color-text-secondary); padding-left: 8px;">
+                    Observation: 18 passed, 0 failed in 0.38s
                   </div>
-                  <div style="margin-top: 8px;"><span class="terminal-prompt">$</span> <span class="terminal-cursor cursor-blink" aria-hidden="true"></span></div>
+                  <div style="color: var(--color-text-primary);">
+                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Output: Workflow verified. Ready for deployment.
+                  </div>
+                  <div style="color: rgba(255,255,255,0.2); margin: 4px 0;">-------------------------------------------------------------</div>
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; color: var(--color-lime); font-size: 11px;">
+                    <span>CONFIDENCE: 98.6%</span>
+                    <span>STATUS: NOMINAL</span>
+                  </div>
+                  <div style="margin-top: 6px;"><span class="terminal-prompt">$</span> <span class="terminal-cursor cursor-blink" aria-hidden="true"></span></div>
                 </div>
               </div>
             </div>
@@ -612,41 +600,42 @@
 
           <!-- 3-Column Projects Grid -->
           <div class="projects-grid" id="additional-projects-grid">
-            <!-- Project 02: Student Records Manager -->
+            <!-- Project 02: Neural Scripting & Automation Engine -->
             <article class="card project-card scroll-reveal delay-1" data-categories="python">
               <div>
                 <div class="project-card-header">
                   <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">project_02</span>
                   <span class="status-badge status-badge-amber">In progress</span>
                 </div>
-                <h3 class="project-card-title">Student Records Manager</h3>
-                <p class="project-card-desc">Stores, retrieves, and searches structured student academic records using Python binary files with serialization.</p>
+                <h3 class="project-card-title">Neural Scripting Engine</h3>
+                <p class="project-card-desc">A modular Python automation suite engineered for high-throughput batch file processing, structured data pipelines, and scheduled scraping.</p>
                 <div class="project-card-tags">
                   <span class="chip">Python</span>
-                  <span class="chip">Binary files</span>
+                  <span class="chip">Data Pipelines</span>
+                  <span class="chip">Automation</span>
                 </div>
               </div>
               <div class="project-card-footer">
-                <span class="btn-disabled" data-tooltip="Coming soon" style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-sm);">
+                <a href="https://github.com/bshtparth-source/Portfolio_Website" target="_blank" rel="noopener noreferrer" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm);">
                   <span>GitHub ↗</span>
-                </span>
-                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">src/main.py</span>
+                </a>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">core/engine.py</span>
               </div>
             </article>
 
-            <!-- Project 03: Personal Portfolio -->
+            <!-- Project 03: Developer Terminal Portfolio -->
             <article class="card project-card scroll-reveal delay-2" data-categories="web">
               <div>
                 <div class="project-card-header">
                   <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">project_03</span>
-                  <span class="status-badge status-badge-amber">In progress</span>
+                  <span class="status-badge status-badge-lime">Shipped</span>
                 </div>
-                <h3 class="project-card-title">Personal Portfolio</h3>
-                <p class="project-card-desc">This portfolio website: designed in Stitch, engineered with Antigravity, and deployed on Netlify with zero build step.</p>
+                <h3 class="project-card-title">Developer Terminal Portfolio</h3>
+                <p class="project-card-desc">This portfolio website: zero-build architecture, handwritten CSS variables, Obsidian glass aesthetic, and instant Netlify CDN deployment.</p>
                 <div class="project-card-tags">
-                  <span class="chip">HTML</span>
-                  <span class="chip">CSS</span>
-                  <span class="chip">Netlify</span>
+                  <span class="chip">Vanilla JS</span>
+                  <span class="chip">CSS3 Variables</span>
+                  <span class="chip">Netlify Edge</span>
                 </div>
               </div>
               <div class="project-card-footer">
@@ -658,7 +647,7 @@
                     Live ↗
                   </a>
                 </div>
-                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">index.html</span>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">public/index.html</span>
               </div>
             </article>
 
@@ -669,12 +658,12 @@
                   <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">Upcoming</span>
                   <span class="status-badge status-badge-muted">Planned</span>
                 </div>
-                <h3 class="project-card-title">Next up: GenAI mini-project</h3>
-                <p class="project-card-desc">Exploring prompt engineering, tool use, LLM agents, and automated development workflows. Kicking off soon.</p>
+                <h3 class="project-card-title">Next GenAI Research Sprint</h3>
+                <p class="project-card-desc">Deep dive into local LLM inference, multimodal prompt tuning, and autonomous multi-agent swarms. Specifying requirements.</p>
 
                 <!-- Mini Terminal Typer Loop -->
                 <div class="coming-soon-terminal" id="coming-soon-terminal" aria-live="off">
-                  <div><span style="color: var(--color-lime);">$</span> <span id="coming-soon-typer-text">git checkout -b next-project</span><span class="cursor-blink" style="color: var(--color-lime);">_</span></div>
+                  <div><span style="color: var(--color-lime);">$</span> <span id="coming-soon-typer-text">python -m research.init</span><span class="cursor-blink" style="color: var(--color-lime);">_</span></div>
                   <!-- Indeterminate Shimmer Progress Bar -->
                   <div class="shimmer-track">
                     <div class="shimmer-bar"></div>
@@ -684,7 +673,7 @@
               <div class="project-card-footer">
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <span class="pulse-dot-lime" aria-hidden="true"></span>
-                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">specifying requirements</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">sprint_02/spec.md</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-lime); opacity: 0.8;">[queued]</span>
               </div>
@@ -710,82 +699,109 @@
 
             <!-- Skills Stack (Rendered / Updated via data.js) -->
             <div class="skills-stack" id="skills-container">
-              <!-- Card 1: Languages -->
+              <!-- Card 1: Core Languages & Runtimes -->
               <div class="card skill-category-card">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Languages</span>
-                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[01] // lang</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Core Languages & Runtimes</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[01] // runtime</span>
                 </div>
                 <div class="skill-items-wrap">
                   <span class="skill-pill">
-                    <span class="skill-dot-using"></span>
-                    <span>Python · Using</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Python 3.12</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Primary</span>
                   </span>
                   <span class="skill-pill">
-                    <span class="skill-dot-learning"></span>
-                    <span>HTML · Learning</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">JavaScript (ES6+)</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Web</span>
                   </span>
                   <span class="skill-pill">
-                    <span class="skill-dot-learning"></span>
-                    <span>CSS · Learning</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">HTML5 Semantic Web</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Markup</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Modern CSS3</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Styling</span>
                   </span>
                 </div>
               </div>
 
-              <!-- Card 2: Tools -->
+              <!-- Card 2: AI & GenAI Toolchain -->
               <div class="card skill-category-card">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Tools</span>
-                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[02] // devtools</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">AI & GenAI Toolchain</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[02] // ai_stack</span>
                 </div>
                 <div class="skill-items-wrap">
                   <span class="skill-pill">
-                    <span class="skill-dot-learning"></span>
-                    <span>Git · Learning</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Generative AI & LLMs</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Core Focus</span>
                   </span>
                   <span class="skill-pill">
-                    <span class="skill-dot-learning"></span>
-                    <span>GitHub · Learning</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Prompt Engineering</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Specialization</span>
                   </span>
                   <span class="skill-pill">
-                    <span class="skill-dot-learning"></span>
-                    <span>Netlify · Learning</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Google Gemini API</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Integration</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Agentic Workflows</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Research</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">RAG Architecture</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Foundations</span>
                   </span>
                 </div>
               </div>
 
-              <!-- Card 3: Focus -->
+              <!-- Card 3: Developer Tools & Infrastructure -->
               <div class="card skill-category-card">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Focus</span>
-                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[03] // research</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Developer Tools & Infrastructure</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[03] // devtools</span>
                 </div>
                 <div class="skill-items-wrap">
                   <span class="skill-pill">
-                    <span class="skill-dot-exploring"></span>
-                    <span>Generative AI · Exploring</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Git & GitHub</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Version Control</span>
                   </span>
                   <span class="skill-pill">
-                    <span class="skill-dot-exploring"></span>
-                    <span>Prompt design · Exploring</span>
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Linux / Bash Shell</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Environment</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">VS Code</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Editor</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Netlify Edge</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Deployment</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">REST APIs & JSON</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Networking</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
+                    <span style="font-weight: 500;">Virtual Environments</span>
+                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Tooling</span>
                   </span>
                 </div>
-              </div>
-            </div>
-
-            <!-- Dot Legend Pill -->
-            <div class="skills-legend-bar">
-              <div class="legend-item">
-                <span class="skill-dot-using"></span>
-                <span>Using (filled dot)</span>
-              </div>
-              <div class="legend-item">
-                <span class="skill-dot-learning"></span>
-                <span>Learning (half dot)</span>
-              </div>
-              <div class="legend-item">
-                <span class="skill-dot-exploring"></span>
-                <span>Exploring (hollow dot)</span>
               </div>
             </div>
           </div>

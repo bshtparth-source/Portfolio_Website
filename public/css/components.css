@@ -565,29 +565,3 @@
   color: var(--color-text-secondary);
 }
 
-/* Dot glyphs for skills */
-.skill-dot-using {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--color-lime);
-  display: inline-block;
-  box-shadow: 0 0 8px var(--color-lime-glow);
-}
-
-.skill-dot-learning {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  border-radius: var(--radius-full);
-  background: linear-gradient(to right, var(--color-text-secondary) 50%, transparent 50%);
-  border: 1px solid var(--color-text-secondary);
-}
-
-.skill-dot-exploring {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-text-secondary);
-  display: inline-block;
-}
