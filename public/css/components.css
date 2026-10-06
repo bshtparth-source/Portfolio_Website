@@ -100,6 +100,21 @@
   height: 22px;
 }
 
+@media (max-width: 1023px) {
+  .site-header .pill-niat {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+}
+
 /* Mobile nav menu dropdown */
 .mobile-menu {
   display: none;

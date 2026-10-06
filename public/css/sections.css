@@ -389,6 +389,12 @@
   transition: border-color var(--transition-normal);
 }
 
+@media (max-width: 639px) {
+  .photo-card {
+    height: 260px;
+  }
+}
+
 .photo-card:hover {
   border-color: var(--color-surface-border-hover);
 }
