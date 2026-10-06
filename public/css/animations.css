@@ -82,6 +82,12 @@
   will-change: opacity, transform;
 }
 
+/* Above-the-fold hero elements are always visible immediately */
+.hero-section .scroll-reveal {
+  opacity: 1;
+  transform: none;
+}
+
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
