@@ -331,7 +331,7 @@
                       <span class="pulse-dot-lime" aria-hidden="true"></span>
                       <h3>GenAI &amp; Agents</h3>
                     </div>
-                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">AGENTIC_DEV</span>
+                    
                   </div>
                   <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
                     Exploring prompt engineering, tool use, LLM agents, and automated development workflows.
@@ -344,7 +344,7 @@
                       <span class="pulse-dot-lime" aria-hidden="true"></span>
                       <h3>Python Ecosystem</h3>
                     </div>
-                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">PYTHON_3.12</span>
+                    
                   </div>
                   <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
                     Writing clean, typed scripts, data manipulation, automation tools, and CLI applications.
@@ -357,7 +357,7 @@
                       <span class="pulse-dot-lime" aria-hidden="true"></span>
                       <h3>Web &amp; Systems</h3>
                     </div>
-                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">FULLSTACK_BASICS</span>
+                    
                   </div>
                   <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
                     Modern web interfaces, developer tooling, and API integration.
@@ -537,10 +537,10 @@
                     An experimental Python evaluation harness exploring LLM tool-calling, multi-step agentic reasoning, and automated developer workflows.
                   </p>
                   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span class="chip">Python 3.12</span>
-                    <span class="chip">Gemini API</span>
-                    <span class="chip">Agentic Workflows</span>
-                    <span class="chip">CLI</span>
+                    
+                    
+                    
+                    
                   </div>
                 </div>
 
@@ -566,29 +566,22 @@
                     <span class="terminal-dot terminal-dot-subtle"></span>
                     <span class="terminal-dot terminal-dot-subtle"></span>
                   </div>
-                  <span class="terminal-title">agent_bench.py — bash</span>
+                  <span class="terminal-title">agent.py — bash</span>
                   <div style="width: 30px;"></div>
                 </div>
                 <div class="terminal-body" style="font-size: 12px; line-height: 1.6; font-family: var(--font-mono);">
-                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">python agent_bench.py --eval --target=gemini</span></div>
-                  <div style="color: var(--color-text-secondary); margin: 6px 0;">[+] Initializing autonomous agent runtime environment...</div>
-                  <div style="color: var(--color-lime); opacity: 0.9;">[+] System prompt: loaded (developer_mode / zero_shot)</div>
-                  <div style="color: var(--color-amber);">[+] Tool registry: [git_cli, bash_exec, file_search] (3 tools active)</div>
-                  <div style="color: rgba(255,255,255,0.2); margin: 4px 0;">-------------------------------------------------------------</div>
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">python agent.py --run</span></div>
+                  <div style="color: var(--color-lime); opacity: 0.9; margin: 4px 0;">[+] Initializing autonomous runtime...</div>
                   <div style="color: var(--color-text-primary);">
-                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Thought: Analyzing repository workspace and test suites...
+                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Analyzing repo...
                   </div>
                   <div style="color: var(--color-lime);">
-                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Tool Call: bash_exec("pytest -q tests/")
+                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Tool Call: bash("pytest")
                   </div>
                   <div style="color: var(--color-text-secondary); padding-left: 8px;">
-                    Observation: 18 passed, 0 failed in 0.38s
+                    Obs: 18 passed in 0.38s
                   </div>
-                  <div style="color: var(--color-text-primary);">
-                    <span style="color: var(--color-amber); font-weight: 600;">AGENT &gt;</span> Output: Workflow verified. Ready for deployment.
-                  </div>
-                  <div style="color: rgba(255,255,255,0.2); margin: 4px 0;">-------------------------------------------------------------</div>
-                  <div style="display: flex; justify-content: space-between; font-weight: 600; color: var(--color-lime); font-size: 11px;">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; color: var(--color-lime); font-size: 11px; margin-top: 8px;">
                     <span>CONFIDENCE: 98.6%</span>
                     <span>STATUS: NOMINAL</span>
                   </div>
@@ -610,9 +603,9 @@
                 <h3 class="project-card-title">Neural Scripting Engine</h3>
                 <p class="project-card-desc">A modular Python automation suite engineered for high-throughput batch file processing, structured data pipelines, and scheduled scraping.</p>
                 <div class="project-card-tags">
-                  <span class="chip">Python</span>
-                  <span class="chip">Data Pipelines</span>
-                  <span class="chip">Automation</span>
+                  
+                  
+                  
                 </div>
               </div>
               <div class="project-card-footer">
@@ -633,9 +626,9 @@
                 <h3 class="project-card-title">Developer Terminal Portfolio</h3>
                 <p class="project-card-desc">This portfolio website: zero-build architecture, handwritten CSS variables, Obsidian glass aesthetic, and instant Netlify CDN deployment.</p>
                 <div class="project-card-tags">
-                  <span class="chip">Vanilla JS</span>
-                  <span class="chip">CSS3 Variables</span>
-                  <span class="chip">Netlify Edge</span>
+                  
+                  
+                  
                 </div>
               </div>
               <div class="project-card-footer">
@@ -655,7 +648,7 @@
             <article class="card card-coming-soon marching-dashes-card project-card scroll-reveal delay-3" data-categories="genai" aria-label="Upcoming Project">
               <div>
                 <div class="project-card-header">
-                  <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">Upcoming</span>
+                  
                   <span class="status-badge status-badge-muted">Planned</span>
                 </div>
                 <h3 class="project-card-title">Next GenAI Research Sprint</h3>
@@ -709,22 +702,22 @@
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Python 3.12</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Primary</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">JavaScript (ES6+)</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Web</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">HTML5 Semantic Web</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Markup</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Modern CSS3</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Styling</span>
+                    
                   </span>
                 </div>
               </div>
@@ -739,27 +732,27 @@
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Generative AI & LLMs</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Core Focus</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Prompt Engineering</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Specialization</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Google Gemini API</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Integration</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Agentic Workflows</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Research</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">RAG Architecture</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Foundations</span>
+                    
                   </span>
                 </div>
               </div>
@@ -774,32 +767,32 @@
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Git & GitHub</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Version Control</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Linux / Bash Shell</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Environment</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">VS Code</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Editor</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Netlify Edge</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Deployment</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">REST APIs & JSON</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Networking</span>
+                    
                   </span>
                   <span class="skill-pill">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Virtual Environments</span>
-                    <span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">Tooling</span>
+                    
                   </span>
                 </div>
               </div>
@@ -840,7 +833,7 @@
                     </div>
                     <div class="timeline-header">
                       <span class="timeline-hash">7c8d9e0</span>
-                      <span class="chip">milestone</span>
+                      
                     </div>
                     <h3 class="timeline-title">Started HTML and CSS</h3>
                     <p class="timeline-desc">Learning semantic HTML5 structure, modern CSS flexbox/grid layout, and responsive design fundamentals.</p>
@@ -853,7 +846,7 @@
                     </div>
                     <div class="timeline-header">
                       <span class="timeline-hash">e4f5a6b</span>
-                      <span class="chip">milestone</span>
+                      
                     </div>
                     <h3 class="timeline-title">Learned Python fundamentals</h3>
                     <p class="timeline-desc">Deep dive into clean script architecture, CSV parsing, data structures, and binary file handling.</p>

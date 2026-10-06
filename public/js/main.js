@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="skill-pill">
             <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
             <span style="font-weight: 500;">${item.name}</span>
-            ${item.tag ? `<span class="chip" style="font-size: 10px; padding: 2px 6px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">${item.tag}</span>` : ''}
           </span>
         `;
       });
