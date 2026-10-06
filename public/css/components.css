@@ -1,0 +1,578 @@
+/**
+ * components.css
+ * Parth Bisht Portfolio — Reusable UI Components
+ * Handwritten semantic CSS. All design tokens sourced from variables.css.
+ */
+
+/* ==========================================================================
+   1. Sticky Glass Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--color-surface-border);
+  z-index: 100;
+  transition: border-color var(--transition-fast);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: var(--space-md);
+}
+
+/* Brand terminal logo */
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-lime);
+  font-weight: 700;
+  letter-spacing: var(--track-snug);
+  padding: var(--space-xs) 0;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-link:hover {
+  opacity: 0.85;
+}
+
+/* Desktop navigation links */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: var(--space-2xs) 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* Active link indicator (IntersectionObserver toggles this) */
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-lime);
+}
+
+/* Header right utilities */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Mobile hamburger button */
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  padding: 10px;
+}
+
+.hamburger-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Mobile nav menu dropdown */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-surface-border);
+  padding: var(--space-lg) var(--gutter-mobile);
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-overlay);
+  z-index: 99;
+}
+
+.mobile-menu.is-open {
+  display: flex;
+}
+
+.mobile-menu .nav-link {
+  font-size: var(--text-base);
+  padding: var(--space-xs) 0;
+}
+
+/* ==========================================================================
+   2. Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: 44px; /* Touch target minimum */
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary lime button (What I build, primary CTAs) */
+.btn-primary {
+  background-color: var(--color-lime);
+  color: var(--color-text-inverse);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: var(--shadow-lime);
+}
+
+/* Secondary outline button */
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-surface-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface-raised);
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+}
+
+/* Ghost outline button */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+}
+
+/* Disabled button with tooltip */
+.btn-disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: auto;
+  position: relative;
+}
+
+.btn-disabled:hover,
+.btn[aria-disabled="true"]:hover {
+  transform: none;
+  border-color: var(--color-surface-border);
+  color: var(--color-text-secondary);
+}
+
+/* Animated Coming Soon button (for Resume) */
+.btn-coming-soon {
+  background: var(--color-surface);
+  color: var(--color-lime);
+  border: 1px dashed var(--color-lime);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-coming-soon:hover {
+  background: var(--color-lime-bg);
+  box-shadow: 0 0 16px var(--color-lime-glow);
+}
+
+/* Tooltip container */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--color-bg-alt);
+  color: var(--color-lime);
+  border: 1px solid var(--color-lime-border);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  z-index: 50;
+  box-shadow: var(--shadow-overlay);
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   3. Badges, Chips & Pills
+   ========================================================================== */
+/* NIAT Lead Identity Pill */
+.pill-niat {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-amber-bg);
+  border: 1px solid var(--color-amber-border);
+  color: var(--color-amber);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--track-normal);
+  text-decoration: none;
+}
+
+/* Pulse indicator dot for NIAT */
+.pulse-dot-amber {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-amber);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--color-amber);
+}
+
+/* Pulse indicator dot for Lime / Live */
+.pulse-dot-lime {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-lime);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--color-lime);
+}
+
+/* Tech stack chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 4px 10px;
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.2;
+}
+
+/* Interactive navigation chips (in hero terminal) */
+.chip-interactive {
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.chip-interactive:hover {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+  background-color: var(--color-surface);
+}
+
+.chip-interactive .chip-prefix {
+  color: var(--color-lime-dim);
+}
+
+/* ==========================================================================
+   4. Terminal Window Component
+   ========================================================================== */
+.terminal-window {
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-overlay);
+  position: relative;
+  transition: border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.terminal-window:hover {
+  border-color: var(--color-surface-border-hover);
+  background-color: var(--color-surface-raised);
+}
+
+/* Glass window header bar */
+.terminal-header {
+  height: 44px;
+  padding: 0 var(--space-md);
+  background: rgba(10, 12, 15, 0.75);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--color-surface-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+/* Traffic light control dots */
+.terminal-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.terminal-dot-red { background-color: var(--color-term-red); }
+.terminal-dot-yellow { background-color: var(--color-term-yellow); }
+.terminal-dot-green { background-color: var(--color-term-green); }
+
+.terminal-dot-subtle {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  letter-spacing: var(--track-wide);
+}
+
+.terminal-meta-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Terminal Interior Body */
+.terminal-body {
+  background-color: var(--color-bg-alt);
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  overflow-x: auto;
+}
+
+.terminal-prompt {
+  color: var(--color-lime);
+  font-weight: 700;
+  margin-right: var(--space-xs);
+  user-select: none;
+}
+
+.terminal-command {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.terminal-output {
+  color: var(--color-text-secondary);
+  padding-left: var(--space-sm);
+}
+
+/* Terminal Footer status bar */
+.terminal-footer {
+  padding: 10px var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Blinking terminal cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background-color: var(--color-lime);
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* ==========================================================================
+   5. Bento Grid Cards & Modular Tiles
+   ========================================================================== */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.card:hover {
+  background-color: var(--color-surface-raised);
+  border-color: var(--color-surface-border-hover);
+  transform: translateY(-2px);
+}
+
+/* Amber accented card (NIAT credential tile) */
+.card-amber {
+  border-color: var(--color-amber-border);
+}
+
+.card-amber:hover {
+  border-color: var(--color-amber);
+  box-shadow: var(--shadow-amber);
+}
+
+/* ==========================================================================
+   6. Scrolling Marquee Ticker (Fixed at Bottom)
+   ========================================================================== */
+.site-ticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--ticker-height);
+  background-color: rgba(10, 12, 15, 0.95);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--color-surface-border);
+  z-index: 90;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-amber);
+  font-weight: 500;
+  letter-spacing: var(--track-wide);
+  padding-right: var(--space-lg);
+}
+
+.ticker-dot {
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   7. Status Badges & Dot Legend
+   ========================================================================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.status-badge-lime {
+  background: var(--color-lime-bg);
+  border: 1px solid var(--color-lime-border);
+  color: var(--color-lime);
+}
+
+.status-badge-amber {
+  background: var(--color-amber-bg);
+  border: 1px solid var(--color-amber-border);
+  color: var(--color-amber);
+}
+
+.status-badge-muted {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+}
+
+/* Dot glyphs for skills */
+.skill-dot-using {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-lime);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--color-lime-glow);
+}
+
+.skill-dot-learning {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, var(--color-text-secondary) 50%, transparent 50%);
+  border: 1px solid var(--color-text-secondary);
+}
+
+.skill-dot-exploring {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-text-secondary);
+  display: inline-block;
+}

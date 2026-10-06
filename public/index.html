@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character Encoding & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Parth Bisht | NIAT x Sushant University | Student Developer</title>
+  <meta name="title" content="Parth Bisht | NIAT x Sushant University | Student Developer" />
+  <meta name="description" content="Parth Bisht — First-year B.Tech undergraduate at NIAT x Sushant University. Building with GenAI, Python, and modern web systems, one commit at a time." />
+  <meta name="keywords" content="Parth Bisht, NIAT, Sushant University, Python, GenAI, Web Development, Student Developer, Portfolio" />
+  <meta name="author" content="Parth Bisht" />
+  <meta name="theme-color" content="#0A0C0F" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/bshtparth-source/Portfolio_Website" />
+  <meta property="og:title" content="Parth Bisht | NIAT x Sushant University | Student Developer" />
+  <meta property="og:description" content="First-year student at NIAT x Sushant University. Building with GenAI and Python, one commit at a time." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Parth Bisht | NIAT x Sushant University | Student Developer" />
+  <meta property="twitter:description" content="First-year student at NIAT x Sushant University. Building with GenAI and Python, one commit at a time." />
+  <meta property="twitter:image" content="assets/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts Preconnect & Stylesheets (Inter, JetBrains Mono, Space Grotesk) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets (Zero build tools, pure CSS3 with variables) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body class="bg-grid-pattern">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       Sticky Glass Header
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Brand Terminal Prompt -->
+      <a href="#hero" class="brand-link" aria-label="Parth Bisht home prompt">
+        <span class="brand-text">parth@niat:~$</span>
+        <span class="terminal-cursor cursor-blink" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#about" class="nav-link" data-nav="about">~/about</a>
+        <a href="#projects" class="nav-link" data-nav="projects">~/projects</a>
+        <a href="#skills" class="nav-link" data-nav="skills">~/skills</a>
+        <a href="#journey" class="nav-link" data-nav="journey">~/journey</a>
+        <a href="#contact" class="nav-link" data-nav="contact">~/contact</a>
+      </nav>
+
+      <!-- Header Right Badges & Actions -->
+      <div class="header-actions">
+        <!-- NIAT Lead Identity Pill -->
+        <div class="pill-niat" title="Academic Affiliation">
+          <span class="pulse-dot-amber" aria-hidden="true"></span>
+          <span>NIAT x Sushant University</span>
+        </div>
+
+        <!-- Animated Coming Soon Resume Button -->
+        <a href="#about" class="btn btn-coming-soon" id="header-resume-btn" data-tooltip="Resume coming soon" aria-label="Resume coming soon">
+          <span>Resume [soon<span class="cursor-blink">_</span>]</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu (Under 768px) -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#about" class="nav-link mobile-nav-link" data-nav="about">~/about</a>
+      <a href="#projects" class="nav-link mobile-nav-link" data-nav="projects">~/projects</a>
+      <a href="#skills" class="nav-link mobile-nav-link" data-nav="skills">~/skills</a>
+      <a href="#journey" class="nav-link mobile-nav-link" data-nav="journey">~/journey</a>
+      <a href="#contact" class="nav-link mobile-nav-link" data-nav="contact">~/contact</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Content Landmark
+       ======================================================================== -->
+  <main id="main-content">
+    <noscript>
+      <div style="background: #181D24; color: #FFB547; border: 1px solid #FFB547; padding: 16px; margin: 80px 24px 0; border-radius: 8px; font-family: monospace;">
+        <strong>[JavaScript Disabled Notice]</strong> This developer portfolio is enhanced with vanilla JavaScript for interactive terminal features. All essential content, projects, and contact info are fully accessible below without scripts.
+      </div>
+    </noscript>
+
+    <!-- ======================================================================
+         1. HERO SECTION (#hero)
+         ====================================================================== -->
+    <section class="section hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-glow-lime" aria-hidden="true"></div>
+      <div class="hero-glow-amber" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column (5 cols desktop) -->
+          <div class="hero-content scroll-reveal">
+            <!-- Amber Mono Badge -->
+            <div class="hero-badge">
+              <span class="pill-niat">
+                <span class="pulse-dot-amber" aria-hidden="true"></span>
+                <span>NIAT x SUSHANT UNIVERSITY | FIRST YEAR</span>
+              </span>
+            </div>
+
+            <!-- Single Main H1 Heading -->
+            <div class="hero-name-wrapper">
+              <h1 class="hero-title" id="hero-title">Parth Bisht</h1>
+              <span class="hero-title-cursor animate-pulse" aria-hidden="true"></span>
+            </div>
+
+            <!-- Subheading -->
+            <p class="hero-headline">
+              Building with GenAI and Python, one commit at a time.
+            </p>
+
+            <!-- Description -->
+            <p class="hero-description">
+              First-year student at NIAT, learning to turn ideas into working software. I build small projects, share what I learn, and keep shipping.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+
+            <!-- Quick System Stats Sub-strip -->
+            <div class="hero-stats-strip">
+              <div><span class="pulse-dot-lime" aria-hidden="true"></span> NODE // ACTIVE</div>
+              <span class="divider">|</span>
+              <div>STACK // PYTHON 3.12</div>
+              <span class="divider">|</span>
+              <div>LOC // GURUGRAM, IN</div>
+            </div>
+          </div>
+
+          <!-- Right Column (7 cols desktop): Terminal Window -->
+          <div class="hero-terminal-wrapper scroll-reveal delay-2">
+            <div class="terminal-window" id="hero-terminal">
+              <!-- Top Glass Header -->
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot terminal-dot-red"></span>
+                  <span class="terminal-dot terminal-dot-yellow"></span>
+                  <span class="terminal-dot terminal-dot-green"></span>
+                </div>
+                <div class="terminal-title">parth@niat: ~</div>
+                <div class="terminal-meta-tag">bash 80x24</div>
+              </div>
+
+              <!-- Terminal Body with Typing Script Target -->
+              <div class="terminal-body" id="hero-terminal-body" aria-live="polite">
+                <!-- Static initial content for SEO / No-JS fallback -->
+                <div class="term-line"><span class="terminal-prompt">$</span> <span class="terminal-command">whoami</span></div>
+                <div class="terminal-output">parth bisht | first-year @ NIAT x Sushant University</div>
+
+                <div class="term-line" style="margin-top: 10px;"><span class="terminal-prompt">$</span> <span class="terminal-command">cat focus.txt</span></div>
+                <div class="terminal-output">GenAI <span style="opacity: 0.4;">/</span> Python <span style="opacity: 0.4;">/</span> Web development</div>
+
+                <div class="term-line" style="margin-top: 10px;"><span class="terminal-prompt">$</span> <span class="terminal-command">ls projects/</span></div>
+                <div class="terminal-output" style="color: var(--color-amber);">expense-tracker/ &nbsp; student-records/ &nbsp; portfolio/</div>
+
+                <div class="term-line term-active-prompt" style="margin-top: 10px;">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-cursor cursor-blink" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <!-- Terminal Footer Bar -->
+              <div class="terminal-footer">
+                <div>UTF-8 • LF • SYS_TEMP: NORMAL</div>
+                <div style="display: flex; align-items: center; gap: 6px; color: var(--color-lime);">
+                  <span class="pulse-dot-lime" aria-hidden="true"></span>
+                  <span>SYNCHRONIZED</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Quick Navigation Chips -->
+            <div class="hero-nav-chips" aria-label="Terminal fast navigation">
+              <span class="hero-nav-label">cd:</span>
+              <button type="button" class="chip-interactive" data-term-cd="projects">
+                <span class="chip-prefix">~/</span>projects
+              </button>
+              <button type="button" class="chip-interactive" data-term-cd="skills">
+                <span class="chip-prefix">~/</span>skills
+              </button>
+              <button type="button" class="chip-interactive" data-term-cd="journey">
+                <span class="chip-prefix">~/</span>journey
+              </button>
+              <button type="button" class="chip-interactive" data-term-cd="contact">
+                <span class="chip-prefix">~/</span>contact
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Indicator Grid (4 Tiles) -->
+        <div class="telemetry-grid scroll-reveal delay-3">
+          <div class="telemetry-card">
+            <span class="telemetry-label">Active Academic Track</span>
+            <span class="telemetry-value">B.Tech First Year</span>
+            <span class="telemetry-meta telemetry-meta-amber">NIAT x Sushant Univ</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-label">Primary Runtime</span>
+            <span class="telemetry-value">Python &amp; AI Ecosystem</span>
+            <span class="telemetry-meta telemetry-meta-lime">Prompt / Agentic Dev</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-label">Repository Mode</span>
+            <span class="telemetry-value">Public Development</span>
+            <span class="telemetry-meta telemetry-meta-muted">Continuous Ship Cadence</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-label">Terminal Shell</span>
+            <span class="telemetry-value">v1.0.4 Client</span>
+            <div class="telemetry-meta telemetry-meta-lime" style="display: flex; align-items: center; gap: 6px;">
+              <span class="pulse-dot-lime" aria-hidden="true"></span>
+              <span>SYSTEM READY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. ABOUT SECTION (#about) — With Professional Photo Card (Plan v4)
+         ====================================================================== -->
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <!-- Section Breadcrumb & Title -->
+        <div class="section-header scroll-reveal">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <span class="pill-niat">
+              <span class="pulse-dot-amber" aria-hidden="true"></span>
+              <span>NIAT x SUSHANT UNIVERSITY | EDUCATION &amp; BACKGROUND</span>
+            </span>
+            <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">// NODE_PROFILE_ABOUT</span>
+          </div>
+          <h2 class="section-title" id="about-title">
+            About Me <span style="color: var(--color-lime);" class="cursor-blink" aria-hidden="true">█</span>
+          </h2>
+          <p class="section-subtitle">
+            A first-year developer bridging generative AI and foundational software engineering.
+          </p>
+        </div>
+
+        <!-- 12-Column Responsive Bento Layout -->
+        <div class="about-grid">
+          <!-- Left Column: Manifesto & Focus (7 Cols) -->
+          <div class="about-left-col scroll-reveal">
+            <!-- Manifesto Card -->
+            <article class="card">
+              <div class="card-header-bar">
+                <div class="card-header-title">
+                  <span style="font-family: var(--font-mono);">$</span>
+                  <span>cat ~/.bio/manifesto.md</span>
+                </div>
+                <span class="card-header-tag">UTF-8 • READ_ONLY</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <p style="font-size: var(--text-body); color: var(--color-text-primary); line-height: var(--lh-relaxed);">
+                  I am a first-year student at <span style="color: var(--color-amber); font-weight: 600;">NIAT x Sushant University</span>. Rather than waiting for senior years to ship software, I believe in building in public and learning by breaking things.
+                </p>
+                <p style="font-size: var(--text-body); color: var(--color-text-secondary); line-height: var(--lh-relaxed);">
+                  My daily focus revolves around Python backend architecture, GenAI integration, and clean web development. I focus on practical problem solving: learning how language models think, how APIs communicate, and how simple ideas turn into resilient software.
+                </p>
+              </div>
+
+              <!-- Structured Checklist -->
+              <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-surface-border); display: flex; flex-direction: column; gap: 12px;">
+                <div class="checklist-item">
+                  <span class="checklist-icon">[✓]</span>
+                  <span>First-Year B.Tech Computer Science @ <span style="color: var(--color-amber); font-weight: 600;">NIAT x Sushant University</span></span>
+                </div>
+                <div class="checklist-item">
+                  <span class="checklist-icon">[✓]</span>
+                  <span>Core Stack: <code style="background: var(--color-surface-raised); border: 1px solid var(--color-surface-border); padding: 2px 6px; border-radius: 4px; color: var(--color-text-primary);">Python 3.12</code>, LLM Prompting, Agentic Workflows, Modern Web</span>
+                </div>
+                <div class="checklist-item">
+                  <span class="checklist-icon">[✓]</span>
+                  <span>Philosophy: Ship early, iterate continuously, document everything</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Focus Roadmap Card -->
+            <article class="card">
+              <div class="card-header-bar">
+                <div class="card-header-title">
+                  <span style="font-family: var(--font-mono);">$</span>
+                  <span>head -n 4 focus_stack.json</span>
+                </div>
+                <span class="card-header-tag">ACTIVE_ROADMAP</span>
+              </div>
+
+              <div class="focus-stack-grid">
+                <div class="focus-item">
+                  <div class="focus-item-header">
+                    <div class="focus-item-title">
+                      <span class="pulse-dot-lime" aria-hidden="true"></span>
+                      <h3>GenAI &amp; Agents</h3>
+                    </div>
+                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">AGENTIC_DEV</span>
+                  </div>
+                  <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
+                    Exploring prompt engineering, tool use, LLM agents, and automated development workflows.
+                  </p>
+                </div>
+
+                <div class="focus-item">
+                  <div class="focus-item-header">
+                    <div class="focus-item-title">
+                      <span class="pulse-dot-lime" aria-hidden="true"></span>
+                      <h3>Python Ecosystem</h3>
+                    </div>
+                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">PYTHON_3.12</span>
+                  </div>
+                  <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
+                    Writing clean, typed scripts, data manipulation, automation tools, and CLI applications.
+                  </p>
+                </div>
+
+                <div class="focus-item">
+                  <div class="focus-item-header">
+                    <div class="focus-item-title">
+                      <span class="pulse-dot-lime" aria-hidden="true"></span>
+                      <h3>Web &amp; Systems</h3>
+                    </div>
+                    <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">FULLSTACK_BASICS</span>
+                  </div>
+                  <p style="font-size: var(--text-base); color: var(--color-text-secondary);">
+                    Modern web interfaces, developer tooling, and API integration.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Bottom Motto Strip -->
+            <div class="motto-strip">
+              <div>
+                <span style="color: var(--color-lime); font-weight: 600;">~/motto:</span>
+                <span style="font-style: italic; color: var(--color-text-primary);">"Building with GenAI and Python, one commit at a time."</span>
+              </div>
+              <div>
+                <span>LOC_TRACK: 1st_YEAR_DEV</span>
+                <span style="opacity: 0.4;">•</span>
+                <span style="color: var(--color-amber);">NIAT_ENROLLED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (5 Cols) — Plan v4 Layout -->
+          <div class="about-right-col scroll-reveal delay-2">
+            <!-- Row A: Side-by-side Photo Card & NIAT Card -->
+            <div class="about-top-subgrid">
+              <!-- Photo Card: NODE_IDENTITY.jpg -->
+              <article class="photo-card" aria-label="Parth Bisht Identity Node">
+                <div class="photo-card-header">
+                  <div class="terminal-controls">
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-lime); font-weight: 600;">NODE_IDENTITY.jpg</span>
+                </div>
+                <div class="photo-card-body">
+                  <img src="assets/parth_bisht.jpg" alt="Parth Bisht portrait in professional black and white" class="photo-card-img" loading="lazy" />
+                  <div class="photo-card-overlay" aria-hidden="true"></div>
+                  <div class="photo-card-meta">
+                    <div class="photo-card-meta-line">
+                      <span style="color: var(--color-text-primary); font-weight: 600;">$ parth_bisht</span>
+                      <span style="color: var(--color-lime);">● ACTIVE</span>
+                    </div>
+                    <div style="font-size: 11px; color: var(--color-text-muted);">
+                      NIAT x Sushant University
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Academic Foundation Card (Amber Accented) -->
+              <article class="card card-amber education-card" aria-label="Academic Credential">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span class="status-badge status-badge-amber">INSTITUTION RECORD</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-amber);">[EDU]</span>
+                </div>
+                <div style="margin: 12px 0;">
+                  <h3 style="font-size: var(--text-xl); color: var(--color-amber); font-weight: 700;">
+                    NIAT x Sushant University
+                  </h3>
+                  <p style="font-size: var(--text-sm); color: var(--color-text-primary); margin-top: 4px;">
+                    Undergraduate Engineering (First Year)
+                  </p>
+                </div>
+                <div style="margin-bottom: 8px;">
+                  <div class="edu-row">
+                    <span class="edu-label">LOCATION</span>
+                    <span class="edu-value">Gurugram, IN</span>
+                  </div>
+                  <div class="edu-row">
+                    <span class="edu-label">STATUS</span>
+                    <span class="edu-value" style="color: var(--color-amber);">2024-2028 Cohort</span>
+                  </div>
+                  <div class="edu-row">
+                    <span class="edu-label">SEMESTER</span>
+                    <span class="edu-value">Year 1 • Sem 01/02</span>
+                  </div>
+                </div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-secondary); line-height: 1.5;">
+                  Hands-on engineering pedagogy focused on core computing, practical algorithms, and modern AI toolchains.
+                </p>
+              </article>
+            </div>
+
+            <!-- Row B: Terminal Window "sys_info.sh" -->
+            <article class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot terminal-dot-subtle"></span>
+                  <span class="terminal-dot terminal-dot-subtle"></span>
+                  <span class="terminal-dot terminal-dot-subtle"></span>
+                  <span style="margin-left: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--color-text-muted);">bash — 80x24</span>
+                </div>
+                <span class="terminal-meta-tag" style="color: var(--color-lime); font-weight: 600;">sys_info.sh</span>
+              </div>
+              <div class="terminal-body" style="font-size: var(--text-sm);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                  <span class="terminal-prompt">$</span>
+                  <span style="font-weight: 600;">./inspect_environment.sh</span>
+                </div>
+                <div style="border-left: 2px solid rgba(255, 255, 255, 0.08); padding-left: 12px; display: flex; flex-direction: column; gap: 6px;">
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">USER:</span> <span style="color: var(--color-text-primary); font-weight: 600;">parth_bisht</span></div>
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">ROLE:</span> <span style="color: var(--color-text-primary);">First-Year Student</span></div>
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">CAMPUS:</span> <span style="color: var(--color-amber); font-weight: 500;">NIAT x Sushant University</span></div>
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">WORKFLOW:</span> <span style="color: var(--color-lime);">Build -> Commit -> Ship -> Learn</span></div>
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">TIMEZONE:</span> <span style="color: var(--color-text-primary);">IST (UTC+5:30)</span></div>
+                  <div style="display: flex; justify-content: space-between;"><span style="color: var(--color-text-muted);">STATUS:</span> <span style="color: var(--color-lime); font-weight: 700;">OPEN_TO_COLLABORATION</span></div>
+                </div>
+                <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; font-size: 11px;">
+                  <div style="display: flex; align-items: center; gap: 6px; color: var(--color-lime);">
+                    <span class="pulse-dot-lime" aria-hidden="true"></span>
+                    <span>SYSTEM: ALL_METRICS_NOMINAL</span>
+                  </div>
+                  <span style="color: var(--color-text-muted);">PID 4821</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Row C: Action CTAs Stack -->
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="#projects" class="btn btn-primary" style="width: 100%; justify-content: space-between;">
+                <span>Explore My Projects (~/projects)</span>
+                <span>→</span>
+              </a>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Get in Touch</span>
+                </a>
+                <a href="#about" class="btn btn-coming-soon" data-tooltip="Resume coming soon" aria-label="Resume coming soon">
+                  <span>Resume [soon<span class="cursor-blink">_</span>]</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. PROJECTS SECTION (#projects) — Rendered & Enhanced via data.js
+         ====================================================================== -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <!-- Section Header & Filter Toolbar -->
+        <header class="projects-toolbar scroll-reveal">
+          <div>
+            <span class="section-tag">// projects</span>
+            <h2 class="section-title" id="projects-title">Things I've built</h2>
+          </div>
+
+          <!-- Filter Chips Navigation -->
+          <nav class="filter-chips" id="project-filters" aria-label="Project category filters">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="python">Python</button>
+            <button type="button" class="filter-btn" data-filter="genai">GenAI</button>
+            <button type="button" class="filter-btn" data-filter="web">Web</button>
+          </nav>
+        </header>
+
+        <!-- Container for Featured Project & Projects Grid (Rendered by JS, fallback in HTML) -->
+        <div id="projects-container">
+          <!-- Featured Project: Expense Tracker CLI -->
+          <article class="card featured-project scroll-reveal" data-categories="python">
+            <div class="featured-project-grid">
+              <!-- Left Details -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 20px;">
+                <div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase;">project_01</span>
+                    <span class="status-badge status-badge-lime">Shipped</span>
+                  </div>
+                  <h3 style="font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: 12px;">
+                    Expense Tracker CLI
+                  </h3>
+                  <p style="font-size: var(--text-body); color: var(--color-text-secondary); line-height: var(--lh-relaxed); margin-bottom: 16px;">
+                    A command-line tool that logs daily expenses to a CSV file and calculates totals, averages, and breakdowns by category.
+                  </p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="chip">Python</span>
+                    <span class="chip">CSV</span>
+                  </div>
+                </div>
+
+                <div style="padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                  <div style="display: flex; align-items: center; gap: 16px;">
+                    <a href="https://github.com/bshtparth-source/Portfolio_Website" target="_blank" rel="noopener noreferrer" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm); display: inline-flex; align-items: center; gap: 4px;">
+                      <span>GitHub</span>
+                      <span>↗</span>
+                    </a>
+                    <span class="btn-disabled" data-tooltip="Coming soon" style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-sm);">
+                      <span>Live ↗</span>
+                    </span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">last commit: 2 weeks ago</span>
+                </div>
+              </div>
+
+              <!-- Right Dedicated CLI Output Terminal -->
+              <div class="terminal-window" style="box-shadow: none;">
+                <div class="terminal-header" style="height: 38px;">
+                  <div class="terminal-controls">
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                    <span class="terminal-dot terminal-dot-subtle"></span>
+                  </div>
+                  <span class="terminal-title">tracker.py — zsh</span>
+                  <div style="width: 30px;"></div>
+                </div>
+                <div class="terminal-body" style="font-size: 13px; line-height: 1.6;">
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">python tracker.py --summary</span></div>
+                  <div style="color: var(--color-text-secondary); margin: 6px 0;">[+] Loaded records from expenses.csv (42 entries)</div>
+                  <div style="color: rgba(255,255,255,0.2); margin-bottom: 6px;">------------------------------------------------</div>
+                  <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; color: var(--color-text-muted); font-size: 11px; font-weight: 600; margin-bottom: 6px;">
+                    <span>CATEGORY</span>
+                    <span style="text-align: right;">AMOUNT (INR)</span>
+                    <span style="text-align: right;">PERCENTAGE</span>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
+                      <span>Food &amp; Dining</span>
+                      <span style="text-align: right; color: var(--color-text-primary);">₹ 4,250.00</span>
+                      <span style="text-align: right; color: var(--color-text-secondary);">42.5%</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
+                      <span>Books &amp; Learning</span>
+                      <span style="text-align: right; color: var(--color-text-primary);">₹ 3,100.00</span>
+                      <span style="text-align: right; color: var(--color-text-secondary);">31.0%</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
+                      <span>Travel</span>
+                      <span style="text-align: right; color: var(--color-text-primary);">₹ 1,650.00</span>
+                      <span style="text-align: right; color: var(--color-text-secondary);">16.5%</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
+                      <span>Misc</span>
+                      <span style="text-align: right; color: var(--color-text-primary);">₹ 1,000.00</span>
+                      <span style="text-align: right; color: var(--color-text-secondary);">10.0%</span>
+                    </div>
+                  </div>
+                  <div style="color: rgba(255,255,255,0.2); margin: 6px 0;">------------------------------------------------</div>
+                  <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; font-weight: 700; color: var(--color-text-primary);">
+                    <span>TOTAL SPENT</span>
+                    <span style="text-align: right; color: var(--color-lime);">₹ 10,000.00</span>
+                    <span style="text-align: right; color: var(--color-lime); font-size: 11px;">STATUS: OK</span>
+                  </div>
+                  <div style="margin-top: 8px;"><span class="terminal-prompt">$</span> <span class="terminal-cursor cursor-blink" aria-hidden="true"></span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3-Column Projects Grid -->
+          <div class="projects-grid" id="additional-projects-grid">
+            <!-- Project 02: Student Records Manager -->
+            <article class="card project-card scroll-reveal delay-1" data-categories="python">
+              <div>
+                <div class="project-card-header">
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">project_02</span>
+                  <span class="status-badge status-badge-amber">In progress</span>
+                </div>
+                <h3 class="project-card-title">Student Records Manager</h3>
+                <p class="project-card-desc">Stores, retrieves, and searches structured student academic records using Python binary files with serialization.</p>
+                <div class="project-card-tags">
+                  <span class="chip">Python</span>
+                  <span class="chip">Binary files</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <span class="btn-disabled" data-tooltip="Coming soon" style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-sm);">
+                  <span>GitHub ↗</span>
+                </span>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">src/main.py</span>
+              </div>
+            </article>
+
+            <!-- Project 03: Personal Portfolio -->
+            <article class="card project-card scroll-reveal delay-2" data-categories="web">
+              <div>
+                <div class="project-card-header">
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">project_03</span>
+                  <span class="status-badge status-badge-amber">In progress</span>
+                </div>
+                <h3 class="project-card-title">Personal Portfolio</h3>
+                <p class="project-card-desc">This portfolio website: designed in Stitch, engineered with Antigravity, and deployed on Netlify with zero build step.</p>
+                <div class="project-card-tags">
+                  <span class="chip">HTML</span>
+                  <span class="chip">CSS</span>
+                  <span class="chip">Netlify</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; gap: 12px;">
+                  <a href="https://github.com/bshtparth-source/Portfolio_Website" target="_blank" rel="noopener noreferrer" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm);">
+                    GitHub ↗
+                  </a>
+                  <a href="#hero" style="color: var(--color-lime); font-family: var(--font-mono); font-size: var(--text-sm);">
+                    Live ↗
+                  </a>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">index.html</span>
+              </div>
+            </article>
+
+            <!-- Card 4: Animated Coming Soon (Marching Dashes + Looping Typer + Shimmer) -->
+            <article class="card card-coming-soon marching-dashes-card project-card scroll-reveal delay-3" data-categories="genai" aria-label="Upcoming Project">
+              <div>
+                <div class="project-card-header">
+                  <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">Upcoming</span>
+                  <span class="status-badge status-badge-muted">Planned</span>
+                </div>
+                <h3 class="project-card-title">Next up: GenAI mini-project</h3>
+                <p class="project-card-desc">Exploring prompt engineering, tool use, LLM agents, and automated development workflows. Kicking off soon.</p>
+
+                <!-- Mini Terminal Typer Loop -->
+                <div class="coming-soon-terminal" id="coming-soon-terminal" aria-live="off">
+                  <div><span style="color: var(--color-lime);">$</span> <span id="coming-soon-typer-text">git checkout -b next-project</span><span class="cursor-blink" style="color: var(--color-lime);">_</span></div>
+                  <!-- Indeterminate Shimmer Progress Bar -->
+                  <div class="shimmer-track">
+                    <div class="shimmer-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pulse-dot-lime" aria-hidden="true"></span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-secondary);">specifying requirements</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-lime); opacity: 0.8;">[queued]</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. SKILLS & JOURNEY SECTION (#skills & #journey)
+         ====================================================================== -->
+    <section class="section skills-journey-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="skills-journey-grid">
+          <!-- Left Column: Skills (#skills) -->
+          <div class="scroll-reveal">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span class="section-tag">// skills</span>
+              <span style="height: 1px; flex: 1; background: rgba(255, 255, 255, 0.06);"></span>
+            </div>
+            <h2 class="section-title" id="skills-title" style="margin-bottom: 24px;">What I work with</h2>
+
+            <!-- Skills Stack (Rendered / Updated via data.js) -->
+            <div class="skills-stack" id="skills-container">
+              <!-- Card 1: Languages -->
+              <div class="card skill-category-card">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Languages</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[01] // lang</span>
+                </div>
+                <div class="skill-items-wrap">
+                  <span class="skill-pill">
+                    <span class="skill-dot-using"></span>
+                    <span>Python · Using</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span class="skill-dot-learning"></span>
+                    <span>HTML · Learning</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span class="skill-dot-learning"></span>
+                    <span>CSS · Learning</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 2: Tools -->
+              <div class="card skill-category-card">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Tools</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[02] // devtools</span>
+                </div>
+                <div class="skill-items-wrap">
+                  <span class="skill-pill">
+                    <span class="skill-dot-learning"></span>
+                    <span>Git · Learning</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span class="skill-dot-learning"></span>
+                    <span>GitHub · Learning</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span class="skill-dot-learning"></span>
+                    <span>Netlify · Learning</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 3: Focus -->
+              <div class="card skill-category-card">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">Focus</span>
+                  <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[03] // research</span>
+                </div>
+                <div class="skill-items-wrap">
+                  <span class="skill-pill">
+                    <span class="skill-dot-exploring"></span>
+                    <span>Generative AI · Exploring</span>
+                  </span>
+                  <span class="skill-pill">
+                    <span class="skill-dot-exploring"></span>
+                    <span>Prompt design · Exploring</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dot Legend Pill -->
+            <div class="skills-legend-bar">
+              <div class="legend-item">
+                <span class="skill-dot-using"></span>
+                <span>Using (filled dot)</span>
+              </div>
+              <div class="legend-item">
+                <span class="skill-dot-learning"></span>
+                <span>Learning (half dot)</span>
+              </div>
+              <div class="legend-item">
+                <span class="skill-dot-exploring"></span>
+                <span>Exploring (hollow dot)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Journey (#journey) -->
+          <div class="scroll-reveal delay-2" id="journey">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span class="section-tag">// git log</span>
+              <span style="height: 1px; flex: 1; background: rgba(255, 255, 255, 0.06);"></span>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 24px;">My journey so far</h2>
+
+            <article class="card journey-timeline-card">
+              <div class="timeline-track" id="journey-timeline-track">
+                <div class="timeline-nodes">
+                  <!-- Commit Node 4: HEAD -> main -->
+                  <div class="timeline-node">
+                    <div class="timeline-marker">
+                      <span class="timeline-dot timeline-dot-head animate-ping" style="position: absolute; opacity: 0.3;"></span>
+                      <span class="timeline-dot timeline-dot-head"></span>
+                    </div>
+                    <div class="timeline-header">
+                      <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">
+                        HEAD -&gt; main
+                      </span>
+                      <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[active]</span>
+                    </div>
+                    <h3 class="timeline-title">Building my first portfolio</h3>
+                    <p class="timeline-desc">Designing with Google Stitch and building production-quality vanilla web code.</p>
+                  </div>
+
+                  <!-- Commit Node 3: HTML / CSS -->
+                  <div class="timeline-node">
+                    <div class="timeline-marker">
+                      <span class="timeline-dot"></span>
+                    </div>
+                    <div class="timeline-header">
+                      <span class="timeline-hash">7c8d9e0</span>
+                      <span class="chip">milestone</span>
+                    </div>
+                    <h3 class="timeline-title">Started HTML and CSS</h3>
+                    <p class="timeline-desc">Learning semantic HTML5 structure, modern CSS flexbox/grid layout, and responsive design fundamentals.</p>
+                  </div>
+
+                  <!-- Commit Node 2: Python fundamentals -->
+                  <div class="timeline-node">
+                    <div class="timeline-marker">
+                      <span class="timeline-dot"></span>
+                    </div>
+                    <div class="timeline-header">
+                      <span class="timeline-hash">e4f5a6b</span>
+                      <span class="chip">milestone</span>
+                    </div>
+                    <h3 class="timeline-title">Learned Python fundamentals</h3>
+                    <p class="timeline-desc">Deep dive into clean script architecture, CSV parsing, data structures, and binary file handling.</p>
+                  </div>
+
+                  <!-- Commit Node 1: NIAT x Sushant University (Amber Milestone) -->
+                  <div class="timeline-node">
+                    <div class="timeline-marker">
+                      <span class="timeline-dot timeline-dot-amber"></span>
+                    </div>
+                    <div class="timeline-header">
+                      <span class="timeline-hash" style="color: var(--color-amber);">a1b2c3d</span>
+                      <span class="status-badge status-badge-amber">education</span>
+                    </div>
+                    <h3 class="timeline-title" style="color: var(--color-amber);">Joined NIAT x Sushant University</h3>
+                    <p class="timeline-desc">Started B.Tech Undergraduate Engineering cohort 2024-2028, focusing on AI and software systems.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Git log status strip -->
+              <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">
+                <span style="display: flex; align-items: center; gap: 6px;">
+                  <span class="pulse-dot-lime" aria-hidden="true"></span>
+                  <span>4 commits verified</span>
+                </span>
+                <span style="opacity: 0.4;">--topo-order</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. CONTACT SECTION (#contact) — 3 Real Interactive States
+         ====================================================================== -->
+    <section class="section contact-section state-default" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <!-- Floating Toast Notification (Shown in Copied state) -->
+        <div class="contact-toast" id="contact-toast" aria-live="polite">
+          <div class="contact-toast-pill">
+            <span style="color: var(--color-lime); font-weight: bold;">✓</span>
+            <span>Email copied to clipboard: <strong style="color: var(--color-lime);">bshtparth@gmail.com</strong></span>
+          </div>
+        </div>
+
+        <!-- Main Card Container -->
+        <div class="contact-container scroll-reveal">
+          <div class="contact-grid">
+            <!-- Left Column: Copy & Social Actions -->
+            <div>
+              <div class="contact-prompt" id="contact-cli-prompt">$ ./say_hello.sh</div>
+              <h2 class="contact-title" id="contact-title">Let's build something.</h2>
+              <p class="contact-desc">
+                Open to collaborations, mentorship and student projects. Email is my direct channel.
+              </p>
+
+              <!-- Interactive Buttons Row -->
+              <div class="contact-buttons">
+                <!-- State 1 & 2: Primary Email me / Modal Active -->
+                <a href="mailto:bshtparth@gmail.com?subject=Hello%20Parth" class="btn btn-primary btn-email-me" id="btn-email-me" aria-label="Send email to Parth Bisht">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <span id="email-btn-text">Email me</span>
+                </a>
+
+                <!-- Copy Email Quick Action Button -->
+                <button type="button" class="btn btn-secondary" id="btn-copy-email" aria-label="Copy email address to clipboard">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span id="copy-btn-text">Copy email</span>
+                </button>
+
+                <!-- GitHub Button -->
+                <a href="https://github.com/bshtparth-source" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Visit Parth Bisht GitHub profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <!-- Instagram Button (Replaces LinkedIn) -->
+                <a href="https://www.instagram.com/parth_icy_heart?stkn=N3FnODg5cGw5aHky" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Visit Parth Bisht Instagram profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Terminal Window Switching Between the 3 States -->
+            <div>
+              <div class="terminal-window" style="background-color: var(--color-bg-alt);">
+                <div class="terminal-header">
+                  <div class="terminal-controls">
+                    <span class="terminal-dot terminal-dot-red"></span>
+                    <span class="terminal-dot terminal-dot-yellow"></span>
+                    <span class="terminal-dot terminal-dot-green"></span>
+                  </div>
+                  <div class="terminal-title" id="contact-term-title">parth@niat: ~/contact</div>
+                  <div class="terminal-meta-tag">bash</div>
+                </div>
+
+                <!-- STATE VIEW 1: Default State ($ echo $EMAIL) -->
+                <div class="terminal-body state-view-default" style="padding: 24px;">
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">echo $EMAIL</span></div>
+                  <div class="terminal-output" style="color: var(--color-text-primary); font-size: 15px; margin: 8px 0 16px;">
+                    bshtparth@gmail.com
+                  </div>
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-cursor cursor-blink" aria-hidden="true"></span></div>
+                </div>
+
+                <!-- STATE VIEW 2: Compose State (Interactive In-flight mailer demo) -->
+                <div class="terminal-body state-view-compose" style="padding: 20px; font-size: 13px;">
+                  <div style="margin-bottom: 8px;">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">./send_message.sh --to <span style="color: var(--color-amber);">parth@niat</span></span>
+                  </div>
+                  <div style="background: var(--color-surface); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 12px; margin-bottom: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div><span style="color: var(--color-text-muted);">Subject:</span> <strong style="color: #fff;">Collaboration on GenAI / Systems</strong></div>
+                    <div><span style="color: var(--color-text-muted);">From:</span> <span style="color: var(--color-lime);">visitor@client.session</span></div>
+                    <div style="color: var(--color-text-secondary); font-style: italic; border-left: 2px solid var(--color-lime); padding-left: 8px; margin-top: 4px;">
+                      "Opening default mail client to bshtparth@gmail.com..."
+                    </div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+                    <span style="color: var(--color-lime); font-weight: 600;">[ INITIATING MAIL CLIENT... ]</span>
+                    <span style="color: var(--color-amber);">SMTP TLSv1.3</span>
+                  </div>
+                  <div class="shimmer-track">
+                    <div class="shimmer-bar"></div>
+                  </div>
+                </div>
+
+                <!-- STATE VIEW 3: Copied State ($ pbcopy && echo "STATUS: COPIED") -->
+                <div class="terminal-body state-view-copied" style="padding: 20px; font-size: 13px;">
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">echo $EMAIL</span></div>
+                  <div style="color: var(--color-text-secondary); margin: 4px 0 8px 12px;">bshtparth@gmail.com</div>
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-command">pbcopy &lt; email.txt &amp;&amp; echo "STATUS: COPIED TO CLIPBOARD"</span></div>
+                  <div style="color: var(--color-text-primary); margin: 4px 0 8px 12px;">STATUS: COPIED TO CLIPBOARD</div>
+                  <div style="border-left: 2px solid var(--color-lime); color: var(--color-lime); padding-left: 10px; margin: 10px 0; font-weight: 600;">
+                    [✓] [SUCCESS 200 OK] Address copied to clipboard!
+                  </div>
+                  <div><span class="terminal-prompt">$</span> <span class="terminal-cursor cursor-blink" aria-hidden="true"></span></div>
+                </div>
+
+                <div class="terminal-footer">
+                  <span>CHANNEL: DIRECT_DISPATCH</span>
+                  <span style="color: var(--color-lime);">READY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Fixed Bottom Marquee Ticker
+       ======================================================================== -->
+  <div class="site-ticker" aria-hidden="true">
+    <div class="ticker-track animate-marquee">
+      <div class="ticker-item">
+        <span>NIAT x SUSHANT UNIVERSITY</span>
+        <span class="ticker-dot">•</span>
+        <span>FIRST YEAR</span>
+        <span class="ticker-dot">•</span>
+        <span>GENAI</span>
+        <span class="ticker-dot">•</span>
+        <span>PYTHON</span>
+        <span class="ticker-dot">•</span>
+        <span>BUILDING IN PUBLIC</span>
+        <span class="ticker-dot">•</span>
+        <span>NIAT x SUSHANT UNIVERSITY</span>
+        <span class="ticker-dot">•</span>
+        <span>FIRST YEAR</span>
+        <span class="ticker-dot">•</span>
+        <span>GENAI</span>
+        <span class="ticker-dot">•</span>
+        <span>PYTHON</span>
+        <span class="ticker-dot">•</span>
+        <span>BUILDING IN PUBLIC</span>
+        <span class="ticker-dot">•</span>
+      </div>
+      <div class="ticker-item">
+        <span>NIAT x SUSHANT UNIVERSITY</span>
+        <span class="ticker-dot">•</span>
+        <span>FIRST YEAR</span>
+        <span class="ticker-dot">•</span>
+        <span>GENAI</span>
+        <span class="ticker-dot">•</span>
+        <span>PYTHON</span>
+        <span class="ticker-dot">•</span>
+        <span>BUILDING IN PUBLIC</span>
+        <span class="ticker-dot">•</span>
+        <span>NIAT x SUSHANT UNIVERSITY</span>
+        <span class="ticker-dot">•</span>
+        <span>FIRST YEAR</span>
+        <span class="ticker-dot">•</span>
+        <span>GENAI</span>
+        <span class="ticker-dot">•</span>
+        <span>PYTHON</span>
+        <span class="ticker-dot">•</span>
+        <span>BUILDING IN PUBLIC</span>
+        <span class="ticker-dot">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Footer Landmark
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <span>Designed and built by Parth Bisht | </span>
+        <span style="color: var(--color-amber); font-weight: 600;">NIAT x Sushant University</span>
+      </div>
+
+      <div class="footer-social-links">
+        <a href="https://github.com/bshtparth-source" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Parth Bisht GitHub profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://www.instagram.com/parth_icy_heart?stkn=N3FnODg5cGw5aHky" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Parth Bisht Instagram profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <a href="#hero" class="back-to-top" aria-label="Scroll back to top of page">
+          <span>back to top</span>
+          <span>↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Vanilla JavaScript Modules (Zero Build / No ES module CORS issues)
+       Load order: data -> typing -> nav -> projects -> contact -> main
+       ======================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

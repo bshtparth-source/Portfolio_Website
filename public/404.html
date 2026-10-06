@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404: Command Not Found | Parth Bisht</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0A0C0F" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    .error-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl) var(--gutter);
+    }
+    .error-card {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body class="bg-grid-pattern">
+  <main class="error-page-wrapper" id="main-content">
+    <div class="terminal-window error-card">
+      <div class="terminal-header">
+        <div class="terminal-controls">
+          <span class="terminal-dot terminal-dot-red"></span>
+          <span class="terminal-dot terminal-dot-yellow"></span>
+          <span class="terminal-dot terminal-dot-green"></span>
+        </div>
+        <div class="terminal-title">bash — 404_not_found</div>
+        <div class="terminal-meta-tag">ERR_404</div>
+      </div>
+      <div class="terminal-body" style="padding: var(--space-xl);">
+        <p><span class="terminal-prompt">$</span><span class="terminal-command">curl -I https://parth.dev/route</span></p>
+        <p class="terminal-output" style="color: var(--color-term-red); margin-top: 8px;">
+          HTTP/2 404 NOT FOUND<br />
+          server: netlify-edge<br />
+          content-type: text/plain
+        </p>
+        <p style="margin-top: 16px;"><span class="terminal-prompt">$</span><span class="terminal-command">cat /dev/stderr</span></p>
+        <p class="terminal-output" style="margin-top: 8px;">
+          bash: route: command or file not found in current namespace.<br />
+          The page or asset you are searching for does not exist on this node.
+        </p>
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 16px;">
+          <a href="index.html" class="btn btn-primary">
+            <span>$ cd ~ (Return Home)</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+      <div class="terminal-footer">
+        <span>STATUS: EXIT_CODE_127</span>
+        <span style="color: var(--color-lime);">NODE_RECOVERABLE</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

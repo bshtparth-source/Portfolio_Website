@@ -1,0 +1,195 @@
+/**
+ * animations.css
+ * Parth Bisht Portfolio — Micro-interactions, Transitions & Keyframe Animations
+ * Pure CSS. Respects prefers-reduced-motion.
+ */
+
+/* ==========================================================================
+   1. Terminal Cursor Blink
+   ========================================================================== */
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* ==========================================================================
+   2. Status Dot Pulse Animations
+   ========================================================================== */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ==========================================================================
+   3. Scrolling Marquee Ticker
+   ========================================================================== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover,
+.site-ticker:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* ==========================================================================
+   4. Scroll Reveal Animations (Triggered via JS class .revealed)
+   ========================================================================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay helpers */
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+
+/* ==========================================================================
+   5. Marching Dashes (Coming Soon Border)
+   ========================================================================== */
+@keyframes marching-dashes {
+  0% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  100% {
+    background-position: 40px 0, 100% 40px, calc(100% - 40px) 100%, 0 calc(100% - 40px);
+  }
+}
+
+.marching-dashes-card {
+  background-image:
+    linear-gradient(90deg, var(--color-lime) 50%, transparent 50%),
+    linear-gradient(180deg, var(--color-lime) 50%, transparent 50%),
+    linear-gradient(90deg, var(--color-lime) 50%, transparent 50%),
+    linear-gradient(180deg, var(--color-lime) 50%, transparent 50%);
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-size: 16px 1px, 1px 16px, 16px 1px, 1px 16px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  animation: marching-dashes 2s linear infinite;
+  border-radius: var(--radius-xl);
+}
+
+/* ==========================================================================
+   6. Indeterminate Shimmer Progress Bar
+   ========================================================================== */
+@keyframes indeterminate-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.shimmer-bar {
+  animation: indeterminate-shimmer 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ==========================================================================
+   7. Pulse Glow Effects
+   ========================================================================== */
+@keyframes pulse-glow-lime {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(182, 255, 77, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(182, 255, 77, 0.35);
+  }
+}
+
+.glow-pulse-lime {
+  animation: pulse-glow-lime 2.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   8. Reduced Motion Preferences
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cursor-blink,
+  .terminal-cursor,
+  .hero-title-cursor {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .marching-dashes-card {
+    animation: none !important;
+    border: 1px dashed var(--color-lime);
+    background-image: none !important;
+  }
+
+  .shimmer-bar {
+    animation: none !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+}
