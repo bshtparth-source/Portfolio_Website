@@ -1,0 +1,20 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and Secrets
+.env*
+
+# Node / Dependencies (even if none in vanilla project)
+node_modules/
+
+# Logs
+*.log
+
+# Deployment & Netlify cache
+.netlify/
+
+# Editor & IDE settings
+.vscode/
+.idea/
