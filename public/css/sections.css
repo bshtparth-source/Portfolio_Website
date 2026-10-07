@@ -426,12 +426,12 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(100%) contrast(1.06);
+  filter: grayscale(20%); border-radius: var(--radius-xl);
   transition: filter var(--transition-slow), transform var(--transition-slow);
 }
 
 .photo-card:hover .photo-card-img {
-  filter: grayscale(100%) contrast(1.06) brightness(1.06);
+  filter: grayscale(0%);
   transform: scale(1.02);
 }
 
@@ -466,7 +466,7 @@
 /* NIAT Academic Card */
 .education-card {
   height: 100%;
-  min-height: 320px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -978,4 +978,72 @@
 
 .back-to-top:hover {
   color: var(--color-lime);
+}
+
+/* Brewing / Radar Animation */
+.brewing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  min-height: 400px;
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
+  border-radius: var(--radius-2xl);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  animation: pulse-border 4s ease-in-out infinite;
+}
+
+.radar-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(34, 197, 94, 0.2);
+  border-top-color: var(--color-lime);
+  animation: spin 1s linear infinite, glow 2s ease-in-out infinite;
+  margin-bottom: var(--space-md);
+}
+
+.brewing-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+  background: linear-gradient(90deg, var(--color-text-primary), var(--color-lime));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brewing-desc {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); }
+}
+
+@keyframes pulse-border {
+  0% { border-color: rgba(255, 255, 255, 0.1); }
+  50% { border-color: rgba(34, 197, 94, 0.3); }
+  100% { border-color: rgba(255, 255, 255, 0.1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-anim {
+  animation: float 6s ease-in-out infinite;
 }

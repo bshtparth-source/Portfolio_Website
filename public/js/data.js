@@ -35,109 +35,19 @@ const PORTFOLIO_DATA = {
   // Professional Technical Arsenal Matrix (Categorized cleanly by domain)
   skills: [
     {
-      category: "Core Languages & Runtimes",
-      code: "[01] // runtime",
+      category: "What I work with",
+      code: "[01] // core_stack",
       items: [
-        { name: "Python 3.12", tag: "Primary" },
-        { name: "JavaScript (ES6+)", tag: "Web" },
-        { name: "HTML5 Semantic Web", tag: "Markup" },
-        { name: "Modern CSS3", tag: "Styling" }
-      ]
-    },
-    {
-      category: "AI & GenAI Toolchain",
-      code: "[02] // ai_stack",
-      items: [
-        { name: "Generative AI & LLMs", tag: "Core Focus" },
-        { name: "Prompt Engineering", tag: "Specialization" },
-        { name: "Google Gemini API", tag: "Integration" },
-        { name: "Agentic Workflows", tag: "Research" },
-        { name: "RAG Architecture", tag: "Foundations" }
-      ]
-    },
-    {
-      category: "Developer Tools & Infrastructure",
-      code: "[03] // devtools",
-      items: [
-        { name: "Git & GitHub", tag: "Version Control" },
-        { name: "Linux / Bash Shell", tag: "Environment" },
-        { name: "VS Code", tag: "Editor" },
-        { name: "Netlify Edge", tag: "Deployment" },
-        { name: "REST APIs & JSON", tag: "Networking" },
-        { name: "Virtual Environments", tag: "Tooling" }
+        { name: "Python", tag: "" },
+        { name: "HTML (Learning)", tag: "" },
+        { name: "CSS (Learning)", tag: "" }
       ]
     }
   ],
 
-  // Catchy Projects Lab — filterable by categories: 'python', 'genai', 'web'
-  projects: [
-    {
-      id: "project_01",
-      title: "Autonomous AI Agent Workbench",
-      description: "An experimental Python evaluation harness exploring LLM tool-calling, multi-step agentic reasoning, and automated developer workflows.",
-      categories: ["python", "genai"],
-      status: "Active Build",
-      tags: ["Python 3.12", "Gemini API", "Agentic Workflows", "CLI"],
-      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
-      liveUrl: null,
-      isFeatured: true,
-      lastCommit: "Active sprint",
-      // Live Agent execution trace shown in the featured terminal window
-      terminalOutput: {
-        command: "python agent_bench.py --eval --target=gemini",
-        fileInfo: "[+] Initializing autonomous agent runtime environment...",
-        traceLines: [
-          "[+] System prompt: loaded (developer_mode / zero_shot)",
-          "[+] Tool registry: [git_cli, bash_exec, file_search] (3 active tools)",
-          "----------------------------------------------------------------",
-          "AGENT > Thought: Analyzing repository workspace and test suites...",
-          "AGENT > Tool Call: bash_exec(\"pytest -q tests/\")",
-          "AGENT > Observation: 18 passed, 0 failed in 0.38s",
-          "AGENT > Output: Workflow verified. Ready for deployment dispatch.",
-          "----------------------------------------------------------------"
-        ],
-        status: "CONFIDENCE: 98.6% // STATUS: NOMINAL"
-      }
-    },
-    {
-      id: "project_02",
-      title: "Neural Scripting & Automation Engine",
-      description: "A modular Python automation suite engineered for high-throughput batch file processing, structured data pipelines, and scheduled web scraping.",
-      categories: ["python"],
-      status: "In progress",
-      tags: ["Python", "Data Pipelines", "Automation"],
-      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
-      liveUrl: null,
-      isFeatured: false,
-      footerMeta: "core/engine.py"
-    },
-    {
-      id: "project_03",
-      title: "Developer Terminal Portfolio",
-      description: "This portfolio website: zero-build architecture, handwritten CSS variables, Obsidian glass aesthetic, and instant Netlify CDN deployment.",
-      categories: ["web"],
-      status: "Shipped",
-      tags: ["Vanilla JS", "CSS3 Variables", "Netlify Edge"],
-      githubUrl: "https://github.com/bshtparth-source/Portfolio_Website",
-      liveUrl: "https://parth-bisht-dev.netlify.app",
-      isFeatured: false,
-      footerMeta: "public/index.html"
-    },
-    {
-      id: "project_04",
-      title: "Next GenAI Research Sprint",
-      description: "Deep dive into local LLM inference, multimodal prompt tuning, and autonomous multi-agent swarms. Specifying requirements.",
-      categories: ["genai"],
-      status: "coming-soon",
-      tags: ["GenAI", "Local LLM", "Swarm Arch"],
-      githubUrl: null,
-      liveUrl: null,
-      isFeatured: false,
-      isComingSoon: true,
-      footerMeta: "sprint_02/spec.md"
-    }
-  ],
-
+  // Projects Lab — filterable by categories: 'python', 'genai', 'web'
+  projects: [],
+  
   // Git Log Journey Timeline
   timeline: [
     {
