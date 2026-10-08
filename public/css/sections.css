@@ -758,15 +758,16 @@
   padding-left: 36px;
 }
 
-/* Continuous vertical git branch line */
+/* Continuous vertical git branch line (J1) */
 .timeline-track::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 13px;
   top: 14px;
   bottom: 24px;
   width: 2px;
-  background-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, var(--color-lime) 0%, rgba(255, 255, 255, 0.12) 30%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0 0 10px rgba(182, 255, 77, 0.2);
 }
 
 .timeline-nodes {
@@ -1083,3 +1084,13 @@
     animation: none; /* Fix C1: remove jittery float on smaller screens */
   }
 }
+.ambient-glow-lime {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle at center, rgba(182, 255, 77, 0.08) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+

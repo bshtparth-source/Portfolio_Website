@@ -98,10 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
     PORTFOLIO_DATA.skills.forEach((cat) => {
       let itemsHtml = '';
       cat.items.forEach((item) => {
+        const progressDot = item.inProgress ? `<span class="pulse-dot-amber" style="width: 6px; height: 6px; margin-left: 6px;" title="Learning in progress"></span>` : "";
         itemsHtml += `
           <span class="skill-pill">
             <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
             <span style="font-weight: 500;">${item.name}</span>
+            ${progressDot}
           </span>
         `;
       });
@@ -150,3 +152,4 @@ document.addEventListener('DOMContentLoaded', () => {
     'color: #98A2B0; font-family: monospace; font-size: 12px;'
   );
 });
+

@@ -35,12 +35,33 @@ const PORTFOLIO_DATA = {
   // Professional Technical Arsenal Matrix (Categorized cleanly by domain)
   skills: [
     {
-      category: "What I work with",
+      category: "Core Stack",
       code: "[01] // core_stack",
       items: [
-        { name: "Python", tag: "" },
-        { name: "HTML (Learning)", tag: "" },
-        { name: "CSS (Learning)", tag: "" }
+        { name: "Python", inProgress: false },
+        { name: "HTML", inProgress: true },
+        { name: "CSS", inProgress: true }
+      ]
+    },
+    {
+      category: "AI & ML",
+      code: "[02] // ai_tools",
+      items: [
+        { name: "GenAI Prompting", inProgress: false },
+        { name: "Gemini API", inProgress: false },
+        { name: "LLM Workflows", inProgress: true },
+        { name: "Agentic Dev", inProgress: true }
+      ]
+    },
+    {
+      category: "Developer Tools",
+      code: "[03] // dev_tools",
+      items: [
+        { name: "Git", inProgress: false },
+        { name: "GitHub", inProgress: false },
+        { name: "VS Code", inProgress: false },
+        { name: "Netlify", inProgress: false },
+        { name: "Markdown", inProgress: false }
       ]
     }
   ],

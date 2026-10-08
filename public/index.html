@@ -298,16 +298,16 @@
 
               <!-- Structured Checklist -->
               <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-surface-border); display: flex; flex-direction: column; gap: 12px;">
-                <div class="checklist-item">
+                <div class="checklist-item scroll-reveal delay-1">
                   <span class="checklist-icon">[✓]</span>
                   <span>First-Year B.Tech Computer Science @ <span style="color: var(--color-amber); font-weight: 600;">NIAT x Sushant University</span></span>
                 </div>
-                <div class="checklist-item">
-                  <span class="checklist-icon">[✓]</span>
+                <div class="checklist-item scroll-reveal delay-2">
+                  <span class="checklist-icon">[?]</span>
                   <span>Core Stack: <code style="background: var(--color-surface-raised); border: 1px solid var(--color-surface-border); padding: 2px 6px; border-radius: 4px; color: var(--color-text-primary);">Python 3.12</code>, LLM Prompting, Agentic Workflows, Modern Web</span>
                 </div>
-                <div class="checklist-item">
-                  <span class="checklist-icon">[✓]</span>
+                <div class="checklist-item scroll-reveal delay-3">
+                  <span class="checklist-icon">[?]</span>
                   <span>Philosophy: Ship early, iterate continuously, document everything</span>
                 </div>
               </div>
@@ -509,7 +509,7 @@
         <!-- Container for Featured Project & Projects Grid (Rendered by JS, fallback in HTML) -->
         <div id="projects-container">
             <div class="brewing-container scroll-reveal delay-1">
-              <div class="radar-spinner"></div>
+              <div class="radar-spinner" style="border-color: rgba(182, 255, 77, 0.2); border-top-color: var(--color-lime);"></div>
               <h3 class="brewing-title">Building something exciting...</h3>
               <p class="brewing-desc">Compiling new projects. Check back soon for updates!</p>
             </div>
@@ -524,7 +524,8 @@
       <div class="container">
         <div class="skills-journey-grid">
           <!-- Left Column: Skills (#skills) -->
-          <div class="scroll-reveal">
+          <div class="scroll-reveal" style="position: relative;">
+            <div class="ambient-glow-lime" style="top: 10%; left: -20%; opacity: 0.6;" aria-hidden="true"></div>
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
               <span class="section-tag">// skills</span>
               <span style="height: 1px; flex: 1; background: rgba(255, 255, 255, 0.06);"></span>
@@ -568,7 +569,7 @@
               <div class="timeline-track" id="journey-timeline-track">
                 <div class="timeline-nodes">
                   <!-- Commit Node 4: HEAD -> main -->
-                  <div class="timeline-node">
+                  <div class="timeline-node scroll-reveal delay-1">
                     <div class="timeline-marker">
                       <span class="timeline-dot timeline-dot-head animate-ping" style="position: absolute; opacity: 0.3;"></span>
                       <span class="timeline-dot timeline-dot-head"></span>
@@ -577,19 +578,19 @@
                       <span class="chip" style="color: var(--color-lime); border-color: var(--color-lime-border);">
                         HEAD -&gt; main
                       </span>
-                      <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[active]</span>
+                      <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[active]</span><span style="margin-left: auto; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">Oct 2026</span>
                     </div>
                     <h3 class="timeline-title">Building my first portfolio</h3>
                     <p class="timeline-desc">Designing with Google Stitch and building production-quality vanilla web code.</p>
                   </div>
 
                   <!-- Commit Node 3: HTML / CSS -->
-                  <div class="timeline-node">
+                  <div class="timeline-node scroll-reveal delay-1">
                     <div class="timeline-marker">
                       <span class="timeline-dot"></span>
                     </div>
                     <div class="timeline-header">
-                      <span class="timeline-hash">7c8d9e0</span>
+                      <span class="timeline-hash">7c8d9e0</span><span style="margin-left: auto; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">Sep 2026</span>
                       
                     </div>
                     <h3 class="timeline-title">Started HTML and CSS</h3>
@@ -597,12 +598,12 @@
                   </div>
 
                   <!-- Commit Node 2: Python fundamentals -->
-                  <div class="timeline-node">
+                  <div class="timeline-node scroll-reveal delay-1">
                     <div class="timeline-marker">
                       <span class="timeline-dot"></span>
                     </div>
                     <div class="timeline-header">
-                      <span class="timeline-hash">e4f5a6b</span>
+                      <span class="timeline-hash">e4f5a6b</span><span style="margin-left: auto; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">Aug 2026</span>
                       
                     </div>
                     <h3 class="timeline-title">Learned Python fundamentals</h3>
@@ -610,13 +611,13 @@
                   </div>
 
                   <!-- Commit Node 1: NIAT x Sushant University (Amber Milestone) -->
-                  <div class="timeline-node">
+                  <div class="timeline-node scroll-reveal delay-1">
                     <div class="timeline-marker">
                       <span class="timeline-dot timeline-dot-amber"></span>
                     </div>
                     <div class="timeline-header">
                       <span class="timeline-hash" style="color: var(--color-amber);">a1b2c3d</span>
-                      <span class="status-badge status-badge-amber">education</span>
+                      <span class="status-badge status-badge-amber">education</span><span style="margin-left: auto; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">Jul 2026</span>
                     </div>
                     <h3 class="timeline-title" style="color: var(--color-amber);">Joined NIAT x Sushant University</h3>
                     <p class="timeline-desc">Started B.Tech Undergraduate Engineering cohort 2026-2030, focusing on AI and software systems.</p>
@@ -630,7 +631,7 @@
                   <span class="pulse-dot-lime" aria-hidden="true"></span>
                   <span>4 commits verified</span>
                 </span>
-                <span style="opacity: 0.4;">--topo-order</span>
+                <span class="chip" style="font-size: 10px;">--topo-order</span>
               </div>
             </article>
           </div>
@@ -653,7 +654,7 @@
 
         <!-- Main Card Container -->
         <div class="contact-container scroll-reveal">
-          <div class="contact-grid">
+          <div class="ambient-glow-lime" style="top: -150px; left: -150px;" aria-hidden="true"></div><div class="contact-grid">
             <!-- Left Column: Copy & Social Actions -->
             <div>
               <div class="contact-prompt" id="contact-cli-prompt">$ ./say_hello.sh</div>
@@ -868,3 +869,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
