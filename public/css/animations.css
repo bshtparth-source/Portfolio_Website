@@ -5,19 +5,27 @@
  */
 
 /* ==========================================================================
+   0. Page Load Fade-in
+   ========================================================================== */
+@keyframes page-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-fade-in {
+  animation: page-fade 400ms ease-in forwards;
+}
+
+/* ==========================================================================
    1. Terminal Cursor Blink
    ========================================================================== */
 @keyframes blink {
-  0%, 49% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .cursor-blink {
-  animation: blink 1s infinite;
+  animation: blink 1.2s ease-in-out infinite;
 }
 
 /* ==========================================================================
@@ -106,6 +114,8 @@
 .delay-2 { transition-delay: 200ms; }
 .delay-3 { transition-delay: 300ms; }
 .delay-4 { transition-delay: 400ms; }
+.delay-5 { transition-delay: 500ms; }
+.delay-6 { transition-delay: 600ms; }
 
 /* ==========================================================================
    5. Marching Dashes (Coming Soon Border)

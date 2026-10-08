@@ -51,6 +51,8 @@
   padding-top: calc(var(--header-height) + var(--space-xl));
   padding-bottom: var(--space-3xl);
   position: relative;
+  overflow: hidden; /* Fix A1: prevent horizontal scroll from glows or terminal */
+  width: 100%;
 }
 
 /* Subtle ambient background glow spots */
@@ -220,6 +222,17 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-2xs);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.telemetry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.telemetry-card:active {
+  transform: scale(0.98);
+  background-color: var(--color-surface-dim);
 }
 
 .telemetry-label {
@@ -721,11 +734,17 @@
   font-size: var(--text-sm);
   color: var(--color-text-primary);
   user-select: none;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .skill-pill:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-lime-border);
+  box-shadow: 0 0 10px rgba(182,255,77,0.15);
+}
+
+.skill-pill:active {
+  background-color: var(--color-surface-dim);
+  transform: scale(0.98);
 }
 
 /* Journey: Git Log Timeline */
@@ -1057,4 +1076,10 @@
 
 .float-anim {
   animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 1023px) {
+  .float-anim {
+    animation: none; /* Fix C1: remove jittery float on smaller screens */
+  }
 }

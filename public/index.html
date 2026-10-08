@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/animations.css" />
 </head>
-<body class="bg-grid-pattern">
+<body class="bg-grid-pattern page-fade-in">
   <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -76,9 +76,8 @@
           <span>NIAT x Sushant University</span>
         </div>
 
-        <!-- Animated Coming Soon Resume Button -->
         <a href="#about" class="btn btn-coming-soon" id="header-resume-btn" data-tooltip="Resume coming soon" aria-label="Resume coming soon">
-          <span>Resume [soon<span class="cursor-blink">_</span>]</span>
+          <span>Resume <span class="hide-on-mobile">[soon<span class="cursor-blink">_</span>]</span></span>
         </a>
 
         <!-- Mobile Hamburger Toggle -->
@@ -225,23 +224,23 @@
         </div>
 
         <!-- Telemetry Indicator Grid (4 Tiles) -->
-        <div class="telemetry-grid scroll-reveal delay-3">
-          <div class="telemetry-card">
+        <div class="telemetry-grid">
+          <div class="telemetry-card scroll-reveal delay-3">
             <span class="telemetry-label">Active Academic Track</span>
             <span class="telemetry-value">B.Tech First Year</span>
             <span class="telemetry-meta telemetry-meta-amber">NIAT x Sushant Univ</span>
           </div>
-          <div class="telemetry-card">
+          <div class="telemetry-card scroll-reveal delay-4">
             <span class="telemetry-label">Primary Runtime</span>
             <span class="telemetry-value">Python &amp; AI Ecosystem</span>
             <span class="telemetry-meta telemetry-meta-lime">Prompt / Agentic Dev</span>
           </div>
-          <div class="telemetry-card">
+          <div class="telemetry-card scroll-reveal delay-5">
             <span class="telemetry-label">Repository Mode</span>
             <span class="telemetry-value">Public Development</span>
             <span class="telemetry-meta telemetry-meta-muted">Continuous Ship Cadence</span>
           </div>
-          <div class="telemetry-card">
+          <div class="telemetry-card scroll-reveal delay-6">
             <span class="telemetry-label">Terminal Shell</span>
             <span class="telemetry-value">v1.0.4 Client</span>
             <div class="telemetry-meta telemetry-meta-lime" style="display: flex; align-items: center; gap: 6px;">
@@ -265,7 +264,7 @@
               <span class="pulse-dot-amber" aria-hidden="true"></span>
               <span>NIAT x SUSHANT UNIVERSITY | EDUCATION &amp; BACKGROUND</span>
             </span>
-            <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">// NODE_PROFILE_ABOUT</span>
+            
           </div>
           <h2 class="section-title" id="about-title">
             About Me <span style="color: var(--color-lime);" class="cursor-blink" aria-hidden="true">█</span>

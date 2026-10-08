@@ -59,19 +59,38 @@
   font-weight: 500;
   color: var(--color-text-secondary);
   padding: var(--space-2xs) 0;
-  border-bottom: 2px solid transparent;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-lime);
+  transition: width var(--transition-normal);
 }
 
 .nav-link:hover {
   color: var(--color-text-primary);
 }
 
+.nav-link:hover::after {
+  width: 100%;
+}
+
 /* Active link indicator (IntersectionObserver toggles this) */
 .nav-link.active,
 .nav-link[aria-current="page"] {
   color: var(--color-text-primary);
-  border-bottom-color: var(--color-lime);
+}
+
+.nav-link.active::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
 }
 
 /* Header right utilities */
@@ -113,11 +132,14 @@
   .hamburger-btn {
     display: flex;
   }
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 /* Mobile nav menu dropdown */
 .mobile-menu {
-  display: none;
+  display: flex;
   position: fixed;
   top: var(--header-height);
   left: 0;
@@ -129,10 +151,16 @@
   gap: var(--space-md);
   box-shadow: var(--shadow-overlay);
   z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 
 .mobile-menu.is-open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mobile-menu .nav-link {
@@ -280,6 +308,8 @@
   font-weight: 500;
   letter-spacing: var(--track-normal);
   text-decoration: none;
+  white-space: normal;
+  text-align: center;
 }
 
 /* Pulse indicator dot for NIAT */
@@ -420,6 +450,14 @@
   line-height: 1.7;
   color: var(--color-text-primary);
   overflow-x: auto;
+  word-break: break-word; /* Fix A8: wrapping mid-word badly on small screens */
+}
+
+@media (max-width: 767px) {
+  .terminal-body {
+    font-size: var(--text-xs); /* Fix A2: smaller font on mobile */
+    padding: var(--space-md);
+  }
 }
 
 .terminal-prompt {
@@ -479,6 +517,11 @@
   background-color: var(--color-surface-raised);
   border-color: var(--color-surface-border-hover);
   transform: translateY(-2px);
+}
+
+.card:active {
+  transform: scale(0.98);
+  background-color: var(--color-surface-dim);
 }
 
 /* Amber accented card (NIAT credential tile) */
