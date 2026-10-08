@@ -78,7 +78,7 @@ const PORTFOLIO_DATA = {
       hash: "a1b2c3d",
       badge: "education",
       title: "Joined NIAT x Sushant University",
-      description: "Started B.Tech Undergraduate Engineering cohort 2024-2028, focusing on AI and software systems.",
+      description: "Started B.Tech Undergraduate Engineering cohort 2026-2030, focusing on AI and software systems.",
       isCurrentHead: false,
       isAmberMilestone: true
     }

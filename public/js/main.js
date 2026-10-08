@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Initializes Scroll Reveal Observer for fade-up micro-interactions
    */
   const initScrollReveal = () => {
-    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-down');
 
     if (prefersReducedMotion) {
       // If user prefers reduced motion, reveal everything immediately
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       html += `
-        <div class="card skill-category-card">
+        <div class="card skill-category-card scroll-reveal">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
             <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); font-weight: 600;">${cat.category}</span>
             <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">${cat.code}</span>
