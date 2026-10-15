@@ -502,12 +502,50 @@
 
         <!-- Container for Featured Project & Projects Grid (Rendered by JS, fallback in HTML) -->
         <div id="projects-container">
-            <div class="brewing-container">
-              <div class="radar-spinner" style="border-color: rgba(182, 255, 77, 0.2); border-top-color: var(--color-lime);"></div>
-              <h3 class="brewing-title">Building something exciting...</h3>
-              <p class="brewing-desc">Compiling new projects. Check back soon for updates!</p>
+          <div class="build-queue-wrapper">
+            <article class="terminal-window build-queue-terminal" id="build-queue-terminal" aria-label="Live Project Build Stream">
+              <!-- Window Header -->
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot terminal-dot-red" aria-hidden="true"></span>
+                  <span class="terminal-dot terminal-dot-yellow" aria-hidden="true"></span>
+                  <span class="terminal-dot terminal-dot-green" aria-hidden="true"></span>
+                  <span class="terminal-title" style="margin-left: 8px;">build_queue.py — bash 80x24</span>
+                </div>
+                <div class="build-queue-status-badge">
+                  <span class="pulse-dot-lime" aria-hidden="true"></span>
+                  <span class="build-status-text">BUILDING</span>
+                </div>
+              </div>
+
+              <!-- Terminal Output Stream -->
+              <div class="terminal-body build-queue-body" id="build-terminal-stream" tabindex="0" aria-live="polite">
+                <!-- Lines typed dynamically by terminal-typer.js -->
+              </div>
+
+              <!-- Terminal Status Bar -->
+              <div class="build-queue-footer">
+                <div class="build-queue-meta">
+                  <span>UTF-8</span>
+                  <span class="meta-sep">•</span>
+                  <span>LF</span>
+                  <span class="meta-sep">•</span>
+                  <span class="meta-branch">BRANCH: <span style="color: var(--color-lime);">core/v1-preview</span></span>
+                </div>
+                <div class="build-queue-sync">
+                  <span class="pulse-dot-lime" aria-hidden="true"></span>
+                  <span>SYNCHRONIZED</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Captivating Caption Underneath -->
+            <div class="build-queue-caption">
+              <span class="pulse-dot-lime" aria-hidden="true"></span>
+              <span>Engineering in public. First production release compiling — check back soon.</span>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -859,6 +897,7 @@
   <script src="js/typing.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/projects.js"></script>
+  <script src="js/terminal-typer.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/main.js"></script>
 </body>

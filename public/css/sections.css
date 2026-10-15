@@ -567,6 +567,213 @@
   border-color: var(--color-lime);
 }
 
+/* ==========================================================================
+   Live Build Queue Terminal (Projects Section)
+   ========================================================================== */
+.build-queue-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.build-queue-terminal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(182, 255, 77, 0.08);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.build-queue-terminal:hover {
+  border-color: rgba(182, 255, 77, 0.35);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.55), 0 0 32px rgba(182, 255, 77, 0.14);
+}
+
+.build-queue-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  background: rgba(182, 255, 77, 0.08);
+  border: 1px solid rgba(182, 255, 77, 0.25);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-lime);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.build-queue-body {
+  background: #080a0d;
+  min-height: 310px;
+  max-height: 440px;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* Custom minimal scrollbar for build terminal */
+.build-queue-body::-webkit-scrollbar {
+  width: 6px;
+}
+.build-queue-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.build-queue-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+.build-queue-body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lime);
+}
+
+.term-line {
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.term-cmd {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.term-prompt {
+  color: var(--color-lime);
+  user-select: none;
+  font-weight: 700;
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--color-lime);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+.term-log-muted {
+  color: var(--color-text-muted);
+  padding-left: 16px;
+  font-size: 12.5px;
+}
+
+.term-log-success {
+  color: var(--color-lime);
+  padding-left: 16px;
+}
+
+.term-log-info {
+  color: var(--color-text-secondary);
+  padding-left: 16px;
+}
+
+.term-log-highlight {
+  color: #fff;
+  background: rgba(182, 255, 77, 0.08);
+  border-left: 2px solid var(--color-lime);
+  padding: 4px 12px;
+  margin-top: 8px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Progress bar inside terminal */
+.term-progress-wrap {
+  margin: 10px 0 10px 16px;
+  max-width: 580px;
+}
+
+.term-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.term-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.term-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4ade80, var(--color-lime));
+  box-shadow: 0 0 12px rgba(182, 255, 77, 0.6);
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.build-queue-footer {
+  height: 36px;
+  padding: 0 var(--space-md);
+  background: rgba(10, 12, 15, 0.85);
+  border-top: 1px solid var(--color-surface-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+.build-queue-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-sep {
+  opacity: 0.4;
+}
+
+.build-queue-sync {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-lime);
+  font-weight: 500;
+}
+
+.build-queue-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .build-queue-body {
+    font-size: 12px;
+    padding: var(--space-md);
+    min-height: 270px;
+  }
+  .build-queue-caption {
+    font-size: 12px;
+  }
+}
+
 /* Featured Project Card */
 .featured-project {
   margin-bottom: var(--space-xl);
