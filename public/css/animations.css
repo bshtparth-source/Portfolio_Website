@@ -217,3 +217,211 @@
     transform: none !important;
   }
 }
+
+/* ==========================================================================
+   9. Floating Keyframe (for cards & terminal window)
+   ========================================================================== */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-anim {
+  animation: float 5s ease-in-out infinite;
+}
+.float-anim[style*="animation-delay"] {
+  animation: float 5s ease-in-out infinite var(--float-delay, 1s);
+}
+
+/* ==========================================================================
+   10. Radar / Spinner for "Brewing" placeholder
+   ========================================================================== */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes radarGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(182, 255, 77, 0.15); }
+  50%       { box-shadow: 0 0 28px rgba(182, 255, 77, 0.55); }
+}
+
+.radar-spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(182, 255, 77, 0.2);
+  border-top-color: var(--color-lime);
+  animation: spin 1s linear infinite, radarGlow 2.2s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   11. Brewing Container Pulsing Border
+   ========================================================================== */
+@keyframes borderPulse {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.07); }
+  50%       { border-color: rgba(182, 255, 77, 0.25); }
+}
+
+.brewing-container {
+  animation: borderPulse 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   12. Skill Pill Hover Lift
+   ========================================================================== */
+.pill-hover {
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+  cursor: default;
+}
+.pill-hover:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(182, 255, 77, 0.15);
+  border-color: rgba(182, 255, 77, 0.35);
+}
+
+/* ==========================================================================
+   13. Card Interactive Hover Glow
+   ========================================================================== */
+.card {
+  transition: box-shadow 250ms ease, transform 250ms ease, border-color 250ms ease;
+}
+.card:hover {
+  box-shadow: 0 0 0 1px rgba(182, 255, 77, 0.12), 0 8px 32px rgba(182, 255, 77, 0.06);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   14. Navigation Link Underline Slide
+   ========================================================================== */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-lime);
+  transition: width 200ms ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   15. Hero Title Fade-Up Entry
+   ========================================================================== */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  animation: heroFadeUp 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-badge {
+  animation: heroFadeUp 600ms cubic-bezier(0.16, 1, 0.3, 1) 100ms both;
+}
+
+.hero-subtitle {
+  animation: heroFadeUp 600ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
+}
+
+.hero-body {
+  animation: heroFadeUp 600ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+}
+
+.hero-cta-group {
+  animation: heroFadeUp 600ms cubic-bezier(0.16, 1, 0.3, 1) 400ms both;
+}
+
+/* ==========================================================================
+   16. Section Tag Slide-in from left
+   ========================================================================== */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.section-tag {
+  animation: slideInLeft 400ms ease both;
+}
+
+/* ==========================================================================
+   17. Timeline Node Slide-in (already handled in JS but enhanced here)
+   ========================================================================== */
+.timeline-node {
+  transition: opacity 350ms ease, transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   18. Button hover ripple lift
+   ========================================================================== */
+.btn {
+  transition: transform 150ms ease, box-shadow 150ms ease !important;
+}
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(182, 255, 77, 0.25);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255,255,255,0.08);
+}
+
+/* ==========================================================================
+   19. Brewing title gradient shimmer
+   ========================================================================== */
+@keyframes shimmerText {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.brewing-title {
+  background: linear-gradient(90deg, #fff 20%, #b6ff4d 50%, #fff 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerText 3s linear infinite;
+}
+
+/* ==========================================================================
+   20. Reduce-motion: keep all these safe
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .float-anim,
+  .radar-spinner,
+  .brewing-container,
+  .hero-title,
+  .hero-badge,
+  .hero-subtitle,
+  .hero-body,
+  .hero-cta-group,
+  .brewing-title {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+  .pill-hover:hover,
+  .card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}

@@ -380,7 +380,7 @@
           </div>
 
           <!-- Right Column (5 Cols) — Plan v4 Layout -->
-          <div class="about-right-col scroll-reveal delay-2">
+          <div class="about-right-col scroll-reveal">
             <!-- Row A: Side-by-side Photo Card & NIAT Card -->
             <div class="about-top-subgrid">
               <!-- Photo Card: NODE_IDENTITY.jpg -->
@@ -394,7 +394,7 @@
                   <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-lime); font-weight: 600;">NODE_IDENTITY.jpg</span>
                 </div>
                 <div class="photo-card-body">
-                  <img src="assets/parth_bisht.jpg" alt="Parth Bisht portrait in professional black and white" class="photo-card-img" loading="lazy" />
+                  <img src="assets/parth_bisht.jpg" alt="Parth Bisht portrait in professional black and white" class="photo-card-img" loading="eager" />
                   <div class="photo-card-overlay" aria-hidden="true"></div>
                   <div class="photo-card-meta">
                     <div class="photo-card-meta-line">
@@ -497,18 +497,12 @@
             <h2 class="section-title" id="projects-title">Things I've built</h2>
           </div>
 
-          <!-- Filter Chips Navigation -->
-          <nav class="filter-chips" id="project-filters" aria-label="Project category filters">
-            <button type="button" class="filter-btn active" data-filter="all">All</button>
-            <button type="button" class="filter-btn" data-filter="python">Python</button>
-            <button type="button" class="filter-btn" data-filter="genai">GenAI</button>
-            <button type="button" class="filter-btn" data-filter="web">Web</button>
-          </nav>
+          <!-- Filter chips hidden while no projects are live -->
         </header>
 
         <!-- Container for Featured Project & Projects Grid (Rendered by JS, fallback in HTML) -->
         <div id="projects-container">
-            <div class="brewing-container scroll-reveal delay-1">
+            <div class="brewing-container">
               <div class="radar-spinner" style="border-color: rgba(182, 255, 77, 0.2); border-top-color: var(--color-lime);"></div>
               <h3 class="brewing-title">Building something exciting...</h3>
               <p class="brewing-desc">Compiling new projects. Check back soon for updates!</p>
@@ -540,15 +534,15 @@
                   <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-text-muted);">[01] // core_stack</span>
                 </div>
                 <div class="skill-items-wrap">
-                  <span class="skill-pill">
+                  <span class="skill-pill pill-hover">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">Python</span>
                   </span>
-                  <span class="skill-pill">
+                  <span class="skill-pill pill-hover">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">HTML (Learning)</span>
                   </span>
-                  <span class="skill-pill">
+                  <span class="skill-pill pill-hover">
                     <span style="color: var(--color-lime); font-weight: bold; font-family: var(--font-mono); font-size: 11px;">#</span>
                     <span style="font-weight: 500;">CSS (Learning)</span>
                   </span>
